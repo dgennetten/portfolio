@@ -32,8 +32,8 @@ const ArtistBio: React.FC = () => {
             </p>
 
             <p className="text-lg mb-6 leading-relaxed">
-              Douglas's approach combines traditional techniques with contemporary themes, exploring the
-              relationship between natural forms and geometric patterns. His work often incorporates elements
+              My approach combines traditional techniques with contemporary themes, exploring the
+              relationship between natural forms and geometric patterns, often incorporating elements
               of mathematical precision alongside organic spontaneity. These diverse influences intertwine,
               shaping a body of work that merges technical precision with
               artistic expression, structure with emotion, and logic with creativity.

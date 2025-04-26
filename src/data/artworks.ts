@@ -31,7 +31,7 @@ export const artworks: Artwork[] = [
   {
     id: 'painting-2',
     title: 'Untitled',
-    media: 'Acrylic on panel',
+    media: 'Oil on panel',
     description: 'Oil on canvas, 8 × 8 inches, 2023',
     imageSrc: 'https://gennetten.org/PortfolioImages/Paintings/ImpressionistLandscapeOil11_23.jpg',
     category: 'paintings'
@@ -357,26 +357,26 @@ export const artworks: Artwork[] = [
   // Photography
   {
     id: 'photo-1',
-    title: 'Mountain Reflection',
-    media: 'Digital photography',
-    description: 'Serene mountain lake at dawn with perfect reflection on the water surface.',
-    imageSrc: 'https://images.pexels.com/photos/147411/italy-mountains-dawn-daybreak-147411.jpeg',
+    title: 'Ripples',
+    media: 'Digital photography, HP PhotoSmart C945, 2003',
+    description: 'One of those lucky shots. Notice the droplet and its reflection.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Photography/Ripples.jpg',
     category: 'photography'
   },
   {
     id: 'photo-2',
-    title: 'Urban Geometry',
-    media: 'Film photography',
-    description: 'Black and white architectural study exploring geometric patterns in urban environments.',
-    imageSrc: 'https://images.pexels.com/photos/169647/pexels-photo-169647.jpeg',
+    title: 'Sunrise over Trappers Lake',
+    media: 'Digital photography, Pixel 7 Pro, 2024',
+    description: 'One of the many beautiful sunrises over Trappers Lake, Northern Colorado.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Photography/SunriseOverTrappersLake1.jpg',
     category: 'photography'
   },
   {
     id: 'photo-3',
-    title: 'Portrait in Light',
-    media: 'Digital photography',
-    description: 'Dramatic portrait using natural light and shadow to create mood and depth.',
-    imageSrc: 'https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg',
+    title: 'Sunrise over Trappers Lake',
+    media: 'Digital photography, Pixel 7 Pro, 2024',
+    description: 'One of the many beautiful sunrises over Trappers Lake, Northern Colorado.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Photography/SunriseOverTrappersLake2.jpg',
     category: 'photography'
   }
 
