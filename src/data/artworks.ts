@@ -384,7 +384,7 @@ export const artworks: Artwork[] = [
 
 export const featuredArtworks: Artwork[] = [
   artworks.find(art => art.id === 'drawing-1')!,
-  artworks.find(art => art.id === 'painting-2')!,
+  artworks.find(art => art.id === 'painting-1')!,
   artworks.find(art => art.id === 'geometric-3')!,
 ];
 
