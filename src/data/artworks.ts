@@ -57,25 +57,25 @@ export const artworks: Artwork[] = [
   // Sculptures
   {
     id: 'sculpture-1',
-    title: 'Organic Form',
-    media: 'Bronze',
-    description: 'Cast bronze sculpture exploring organic, flowing forms inspired by nature.',
+    title: 'Alabaster Tears',
+    media: 'Colorado ALabaster, 20 x 31cm, 2024',
+    description: 'Abstract figurative, created for the MASKS exhibit at the Fort Collins Museum of Art.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/AlabasterTears.jpg',
     category: 'sculptures'
   },
   {
     id: 'sculpture-2',
-    title: 'Balance',
+    title: 'Marble Muse',
     media: 'Stone and metal',
-    description: 'Mixed media sculpture exploring themes of balance and tension.',
+    description: 'Colorado Yule Marble, 32 inches high on a 10 inch granite base, 2018',
     imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/MarbleMuse1.jpg',
     category: 'sculptures'
   },
   {
     id: 'sculpture-3',
-    title: 'Fractured',
-    media: 'Ceramic',
-    description: 'Ceramic sculpture with unique glazing techniques exploring fragmentation.',
+    title: 'Marble Muse - detail',
+    media: 'Colorado Yule Marble, 32 inches high on a 10 inch granite base, 2018',
+    description: 'Abstract Figurative, closeup showing typical Colorado Yule crystalline structure.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/MarbleMuse2.jpg',
     category: 'sculptures'
   },
@@ -193,6 +193,22 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'sculpture-18',
+    title: 'Perfect Storm',
+    media: 'Alabaster, 23cm, 2005',
+    description: 'Two-sailed sailboat, encapsulated within the storm, dangerously close to the rocky shore',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/PerfectStorm.jpg',
+    category: 'sculptures'
+  },
+  {
+    id: 'sculpture-19',
+    title: 'Aureola',
+    media: 'Colorado Yule Marble, 95cm, 2006',
+    description: 'Abstract figurative',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/Aureola1.jpg',
+    category: 'sculptures'
+  },
+  {
+    id: 'sculpture-20',
     title: 'Aureola - reverse',
     media: 'Colorado Yule Marble, 95cm, 2006',
     description: 'Abstract figurative - I like the back side better than the front.',
@@ -200,7 +216,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-19',
+    id: 'sculpture-21',
     title: 'Aureola - Centennial Gallery',
     media: 'Colorado Yule Marble, 95cm, 2006',
     description: 'Abstract figurative',
@@ -208,7 +224,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-20',
+    id: 'sculpture-22',
     title: 'Aureola - early rough',
     media: 'Colorado Yule Marble, 95cm, 2006',
     description: 'Abstract figurative with maquette.',

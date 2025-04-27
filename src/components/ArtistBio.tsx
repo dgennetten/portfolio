@@ -1,4 +1,5 @@
 import React from 'react';
+import { Instagram, Mail } from 'lucide-react';
 
 const ArtistBio: React.FC = () => {
   return (
@@ -14,6 +15,22 @@ const ArtistBio: React.FC = () => {
                 alt="K. Douglas Gennetten" 
                 className="w-full h-full object-cover"
               />
+            </div>
+            <div className="flex justify-center gap-4 mt-4">
+              <a 
+                href="https://www.instagram.com/dgennetten" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-gray-500 hover:text-black transition-colors"
+              >
+                <Instagram size={24} />
+              </a>
+              <a 
+                href="mailto:douglas@gennetten.com" 
+                className="text-gray-500 hover:text-black transition-colors"
+              >
+                <Mail size={24} />
+              </a>
             </div>
           </div>
 
