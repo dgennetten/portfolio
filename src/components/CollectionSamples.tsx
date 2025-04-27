@@ -33,7 +33,7 @@ const CollectionSamples: React.FC = () => {
         <div className="flex space-x-4 items-center justify-center mt-12 py-0">
           <h4 className="text-3xl md:text-4xl font-light text-center mb-0">All Collections</h4>
           </div>
-        <div className="flex space-x-4 items-center justify-center mt-12 py-0">
+        <div className="flex flex-wrap gap-4 items-center justify-center mt-12 mb-12 py-0">
           <Link
             to="/gallery/drawings"
             className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
