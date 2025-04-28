@@ -1,15 +1,21 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { NavLink, useLocation } from 'react-router-dom';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 import MobileNavigation from './MobileNavigation';
 
 const Navigation: React.FC = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
+  const location = useLocation();
+
+  // Scroll to top on route change
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [location]);
 
   if (isMobile) {
     return <MobileNavigation />;
   }
-  
+
   return (
     <header className="fixed top-0 left-0 right-0 z-40 bg-white bg-opacity-90 backdrop-blur-sm">
       <div className="container mx-auto px-4">
