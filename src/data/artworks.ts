@@ -38,22 +38,21 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'painting-3',
-    title: 'Eye in Guache',
-    media: 'Airbrushed Guache, 9 x 12 inches, 1983',
-    description: 'Experimental airbrushed guache painting from way back!',
-    imageSrc: 'https://gennetten.org/PortfolioImages/Paintings/EyeInGuache.jpg',
-    category: 'paintings'
-  },
-  {
-    id: 'painting-4',
     title: 'Bessie',
     media: 'Pen and Watercolor, 20 x 20cm, 2021',
     description: 'Experimental airbrushed guache painting from way back!',
     imageSrc: 'https://gennetten.org/PortfolioImages/Paintings/Bessie.jpg',
     category: 'paintings'
   },
+  {
+    id: 'painting-4',
+    title: 'Eye in Guache',
+    media: 'Airbrushed Guache, 9 x 12 inches, 1983',
+    description: 'Experimental airbrushed guache painting from way back!',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Paintings/EyeInGuache.jpg',
+    category: 'paintings'
+  },
  
-  
   // Sculptures
   {
     id: 'sculpture-1',
@@ -119,7 +118,7 @@ export const artworks: Artwork[] = [
     imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/FusionCarmesi2.jpg',
     category: 'sculptures'
   },
- {
+  {
     id: 'sculpture-9',
     title: 'Aphrodites',
     media: 'Sandstone, 40cm, 2010',
@@ -129,14 +128,6 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'sculpture-10',
-    title: 'Aphrodites',
-    media: 'Sandstone, 40cm, 2010',
-    description: 'My first attempt at classical figurative, Marble/marble symposium, Marble, CO.',
-    imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/Aphrodites2.jpg',
-    category: 'sculptures'
-  },
-  {
-    id: 'sculpture-11',
     title: 'Entombed',
     media: 'Alabaster and fired clay, 45cm, 2007',
     description: 'Partial Alabaster mask exposing nubile entombed face.',
@@ -144,7 +135,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-12',
+    id: 'sculpture-11',
     title: 'Untitled',
     media: 'Colorado Alabaster, 30cm, 2008',
     description: 'Alabaster mask encased in a ribbon a la Escher.',
@@ -152,7 +143,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-13',
+    id: 'sculpture-12',
     title: 'Untitled, detail',
     media: 'Colorado Alabaster, 30cm, 2008',
     description: 'Alabaster mask encased in a ribbon a la Escher.',
@@ -160,7 +151,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-14',
+    id: 'sculpture-13',
     title: 'Saxy',
     media: 'Colorado Yule Marble, 70cm, 2.5cm granite base, 80kg, 2008',
     description: 'Abstract Saxaphone, [for sale]',
@@ -168,7 +159,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-15',
+    id: 'sculpture-14',
     title: 'Saxy - Centennial Gallery',
     media: 'Colorado Yule Marble, 70cm, 2.5cm granite base, 80kg, 2008',
     description: 'Abstract Saxaphone, [for sale]',
@@ -176,7 +167,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-16',
+    id: 'sculpture-15',
     title: 'Sanctus Forma (Latin for Sacred Form)',
     media: 'Colorado Yule Marble, 95cm, 2.5cm granite base, 2007',
     description: 'Abstract figurative',
@@ -184,7 +175,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-17',
+    id: 'sculpture-16',
     title: 'Sanctus Forma - detail',
     media: 'Colorado Yule Marble, 95cm, 2.5cm granite base, 2007',
     description: 'Abstract figurative',
@@ -192,7 +183,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-18',
+    id: 'sculpture-17',
     title: 'Sanctus Forma - reverse',
     media: 'Colorado Yule Marble, 95cm, 2.5cm granite base, 2007',
     description: 'Abstract figurative',
@@ -200,7 +191,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-19',
+    id: 'sculpture-18',
     title: 'Sanctus Forma - raw start',
     media: 'Colorado Yule Marble, 95cm, 2.5cm granite base, 2007',
     description: 'Abstract figurative with maquette.',
@@ -208,7 +199,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-20',
+    id: 'sculpture-19',
     title: 'Perfect Storm',
     media: 'Alabaster, 23cm, 2005',
     description: 'Two-sailed sailboat, encapsulated within the storm, dangerously close to the rocky shore',
@@ -216,7 +207,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-21',
+    id: 'sculpture-20',
     title: 'Aureola',
     media: 'Colorado Yule Marble, 95cm, 2006',
     description: 'Abstract figurative',
@@ -224,7 +215,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-22',
+    id: 'sculpture-21',
     title: 'Aureola - reverse',
     media: 'Colorado Yule Marble, 95cm, 2006',
     description: 'Abstract figurative - I like the back side better than the front.',
@@ -232,7 +223,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-23',
+    id: 'sculpture-22',
     title: 'Aureola - Centennial Gallery',
     media: 'Colorado Yule Marble, 95cm, 2006',
     description: 'Abstract figurative',
@@ -240,7 +231,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-24',
+    id: 'sculpture-23',
     title: 'Aureola - early rough',
     media: 'Colorado Yule Marble, 95cm, 2006',
     description: 'Abstract figurative with maquette.',
