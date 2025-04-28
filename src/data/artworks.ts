@@ -137,6 +137,30 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'sculpture-11',
+    title: 'Entombed',
+    media: 'Alabaster and fired clay, 45cm, 2007',
+    description: 'Partial Alabaster mask exposing nubile entombed face.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/Entombed.jpg',
+    category: 'sculptures'
+  },
+  {
+    id: 'sculpture-12',
+    title: 'Untitled',
+    media: 'Colorado Alabaster, 30cm, 2008',
+    description: 'Alabaster mask encased in a ribbon a la Escher.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/AlabasterMask1.jpg',
+    category: 'sculptures'
+  },
+  {
+    id: 'sculpture-13',
+    title: 'Untitled, detail',
+    media: 'Colorado Alabaster, 30cm, 2008',
+    description: 'Alabaster mask encased in a ribbon a la Escher.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/AlabasterMask2.jpg',
+    category: 'sculptures'
+  },
+  {
+    id: 'sculpture-14',
     title: 'Saxy',
     media: 'Colorado Yule Marble, 70cm, 2.5cm granite base, 80kg, 2008',
     description: 'Abstract Saxaphone, [for sale]',
@@ -144,7 +168,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-12',
+    id: 'sculpture-15',
     title: 'Saxy - Centennial Gallery',
     media: 'Colorado Yule Marble, 70cm, 2.5cm granite base, 80kg, 2008',
     description: 'Abstract Saxaphone, [for sale]',
@@ -152,7 +176,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-13',
+    id: 'sculpture-16',
     title: 'Sanctus Forma (Latin for Sacred Form)',
     media: 'Colorado Yule Marble, 95cm, 2.5cm granite base, 2007',
     description: 'Abstract figurative',
@@ -160,7 +184,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-14',
+    id: 'sculpture-17',
     title: 'Sanctus Forma - detail',
     media: 'Colorado Yule Marble, 95cm, 2.5cm granite base, 2007',
     description: 'Abstract figurative',
@@ -168,7 +192,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-15',
+    id: 'sculpture-18',
     title: 'Sanctus Forma - reverse',
     media: 'Colorado Yule Marble, 95cm, 2.5cm granite base, 2007',
     description: 'Abstract figurative',
@@ -176,7 +200,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-16',
+    id: 'sculpture-19',
     title: 'Sanctus Forma - raw start',
     media: 'Colorado Yule Marble, 95cm, 2.5cm granite base, 2007',
     description: 'Abstract figurative with maquette.',
@@ -184,7 +208,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-17',
+    id: 'sculpture-20',
     title: 'Aureola',
     media: 'Colorado Yule Marble, 95cm, 2006',
     description: 'Abstract figurative',
@@ -192,7 +216,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-18',
+    id: 'sculpture-21',
     title: 'Perfect Storm',
     media: 'Alabaster, 23cm, 2005',
     description: 'Two-sailed sailboat, encapsulated within the storm, dangerously close to the rocky shore',
@@ -200,7 +224,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-19',
+    id: 'sculpture-22',
     title: 'Aureola',
     media: 'Colorado Yule Marble, 95cm, 2006',
     description: 'Abstract figurative',
@@ -208,7 +232,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-20',
+    id: 'sculpture-23',
     title: 'Aureola - reverse',
     media: 'Colorado Yule Marble, 95cm, 2006',
     description: 'Abstract figurative - I like the back side better than the front.',
@@ -216,7 +240,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-21',
+    id: 'sculpture-24',
     title: 'Aureola - Centennial Gallery',
     media: 'Colorado Yule Marble, 95cm, 2006',
     description: 'Abstract figurative',
@@ -224,7 +248,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-22',
+    id: 'sculpture-25',
     title: 'Aureola - early rough',
     media: 'Colorado Yule Marble, 95cm, 2006',
     description: 'Abstract figurative with maquette.',
