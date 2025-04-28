@@ -209,14 +209,6 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'sculpture-20',
-    title: 'Aureola',
-    media: 'Colorado Yule Marble, 95cm, 2006',
-    description: 'Abstract figurative',
-    imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/Aureola1.jpg',
-    category: 'sculptures'
-  },
-  {
-    id: 'sculpture-21',
     title: 'Perfect Storm',
     media: 'Alabaster, 23cm, 2005',
     description: 'Two-sailed sailboat, encapsulated within the storm, dangerously close to the rocky shore',
@@ -224,7 +216,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-22',
+    id: 'sculpture-21',
     title: 'Aureola',
     media: 'Colorado Yule Marble, 95cm, 2006',
     description: 'Abstract figurative',
@@ -232,7 +224,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-23',
+    id: 'sculpture-22',
     title: 'Aureola - reverse',
     media: 'Colorado Yule Marble, 95cm, 2006',
     description: 'Abstract figurative - I like the back side better than the front.',
@@ -240,7 +232,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-24',
+    id: 'sculpture-23',
     title: 'Aureola - Centennial Gallery',
     media: 'Colorado Yule Marble, 95cm, 2006',
     description: 'Abstract figurative',
@@ -248,7 +240,7 @@ export const artworks: Artwork[] = [
     category: 'sculptures'
   },
   {
-    id: 'sculpture-25',
+    id: 'sculpture-24',
     title: 'Aureola - early rough',
     media: 'Colorado Yule Marble, 95cm, 2006',
     description: 'Abstract figurative with maquette.',
@@ -299,26 +291,26 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'geometric-6',
-    title: '4 x 4 Cube Quadrillic - recto',
+    title: '4 x 4 Cube Quadrillic - verso',
     media: 'Elephant Hide, 16 x 16cm, 2021',
     description: 'Origami Tessellation.',
-    imageSrc: 'https://gennetten.org/PortfolioImages/Geometric/4By4MoleculeQuadrillicRecto.jpg',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Geometric/4By4MoleculeQuadrillicVerso.jpg',
     category: 'geometric'
   },
   {
     id: 'geometric-7',
-    title: '4 x 4 Molecule - recto',
+    title: '4 x 4 Molecule - verso',
     media: 'Elephant Hide, 16 x 16cm, 2021',
     description: 'Origami Tessellation.',
-    imageSrc: 'https://gennetten.org/PortfolioImages/Geometric/4By4MoleculeRecto.jpg',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Geometric/4By4MoleculeVerso.jpg',
     category: 'geometric'
   },
   {
     id: 'geometric-8',
-    title: '4 x 4 Rounded Cubes - recto',
+    title: '4 x 4 Rounded Cubes - verso',
     media: 'Elephant Hide, 16 x 16cm, 2021',
     description: 'Origami Tessellation.',
-    imageSrc: 'https://gennetten.org/PortfolioImages/Geometric/4By4MoleculeRoundedCubesRecto.jpg',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Geometric/4By4MoleculeRoundedCubesVerso.jpg',
     category: 'geometric'
   },
   {
