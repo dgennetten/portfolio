@@ -13,7 +13,7 @@ const CollectionSamples: React.FC = () => {
               to={`/gallery/${artwork.category}`}
               className="block overflow-hidden"
             >
-              <div className="relative aspect-square overflow-hidden mb-4">
+              <div className="relative aspect-square overflow-hidden mb-4 rounded-lg">
                 <img 
                   src={artwork.imageSrc} 
                   alt={artwork.title}

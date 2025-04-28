@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Artwork } from '../types';
 
@@ -12,6 +12,7 @@ interface ImageModalProps {
 
 const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onClose, onNavigate }) => {
   const modalRef = useRef<HTMLDivElement>(null);
+  const [isWide, setIsWide] = useState(false); // State to track if the image is wide
   const currentIndex = artworks.findIndex(art => art.id === artwork.id);
   const hasPrevious = currentIndex > 0;
   const hasNext = currentIndex < artworks.length - 1;
@@ -60,13 +61,18 @@ const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onCl
     };
   }, [onClose, hasPrevious, hasNext, handlePrevious, handleNext]);
 
+  const handleImageLoad = (e: React.SyntheticEvent<HTMLImageElement>) => {
+    const img = e.currentTarget;
+    setIsWide(img.naturalWidth > img.naturalHeight); // Check if the image is wide
+  };
+
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
       <div 
         ref={modalRef} 
-        className="relative max-w-[90vw] max-h-[90vh]"
+        className={`relative max-w-[90vw] max-h-[90vh] flex flex-col items-center ${isWide ? 'justify-center' : ''}`}
       >
         <button 
           onClick={onClose}
@@ -101,13 +107,24 @@ const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onCl
           src={artwork.imageSrc} 
           alt={artwork.title} 
           className="max-w-full max-h-[90vh] object-contain"
+          onLoad={handleImageLoad} // Handle image load to determine aspect ratio
         />
         
-        <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
-          <h3 className="text-xl font-medium">{artwork.title}</h3>
-          <p className="text-gray-300">{artwork.media}</p>
-          <p className="text-gray-400 mt-1">{artwork.description}</p>
-        </div>
+        {isWide ? (
+          // Text below the image for wide images
+          <div className="text-center mt-4">
+            <h3 className="text-xl font-medium text-white">{artwork.title}</h3>
+            <p className="text-gray-300">{artwork.media}</p>
+            <p className="text-gray-400 mt-1">{artwork.description}</p>
+          </div>
+        ) : (
+          // Overlay text for non-wide images
+          <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
+            <h3 className="text-xl font-medium">{artwork.title}</h3>
+            <p className="text-gray-300">{artwork.media}</p>
+            <p className="text-gray-400 mt-1">{artwork.description}</p>
+          </div>
+        )}
       </div>
     </div>
   );
