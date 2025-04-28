@@ -5,7 +5,7 @@ export const artworks: Artwork[] = [
   {
     id: 'drawing-1',
     title: 'Isadore',
-    media: 'Charcoal on paper',
+    media: 'Charcoal on paper, 28 x 36cm, 2024',
     description: 'One of my first portraits under the guidance of Elena Cantor, master classical realism artist and teacher.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/Isadore.jpg',
     category: 'drawings'
@@ -13,7 +13,7 @@ export const artworks: Artwork[] = [
   {
     id: 'drawing-2',
     title: 'Torse Antiqve',
-    media: 'Graphite on paper',
+    media: 'Charcoal on paper, 28 x 36cm, 2024',
     description: 'Intimate torso study of a classic Bargue cast drawing.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/TorseAntiqve.jpg',
     category: 'drawings'
@@ -31,8 +31,8 @@ export const artworks: Artwork[] = [
   {
     id: 'painting-2',
     title: 'Untitled',
-    media: 'Oil on panel',
-    description: 'Oil on canvas, 8 × 8 inches, 2023',
+    media: 'Oil on panel, 8 x 8 inches, 2023',
+    description: 'Oil on canvas impressionist landscape painting.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Paintings/ImpressionistLandscapeOil11_23.jpg',
     category: 'paintings'
   },
@@ -66,7 +66,7 @@ export const artworks: Artwork[] = [
   {
     id: 'sculpture-2',
     title: 'Marble Muse',
-    media: 'Stone and metal',
+    media: 'Colorado Yule Marble, 32 inches, 2018',
     description: 'Colorado Yule Marble, 32 inches high on a 10 inch granite base, 2018',
     imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/MarbleMuse1.jpg',
     category: 'sculptures'
@@ -74,7 +74,7 @@ export const artworks: Artwork[] = [
   {
     id: 'sculpture-3',
     title: 'Marble Muse - detail',
-    media: 'Colorado Yule Marble, 32 inches high on a 10 inch granite base, 2018',
+    media: 'Colorado Yule Marble, 32 inches, 2018',
     description: 'Abstract Figurative, closeup showing typical Colorado Yule crystalline structure.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/MarbleMuse2.jpg',
     category: 'sculptures'
