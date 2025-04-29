@@ -394,6 +394,56 @@ export const artworks: Artwork[] = [
     category: 'geometric'
   },
 
+  // Design
+  {
+    id: 'design-1',
+    title: 'New Logo/Coaster for Thursday Pints group',
+    media: 'Vector Graphics, Illustrator, 2024',
+    description: 'A play on the hp logo (dont tell), this logo is for a group of friends who meet every Thursday for Pints.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/ThursdayPints1.jpg',
+    category: 'design'
+  },
+  {
+    id: 'design-2',
+    title: 'Laser-engraved Coaster for Thursday Pints group',
+    media: 'Vector Graphics, Illustrator, 2024',
+    description: 'Made dozens of these with leather scraps for the group',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/ThursdayPints2.jpg',
+    category: 'design'
+  },
+  {
+    id: 'design-3',
+    title: 'Water Works Logo',
+    media: 'Vector Graphics, Illustrator, 2024',
+    description: 'New Logo for 1883 Water Works, a local historical landmark (design not accpted!).',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/WaterWorks.jpg',
+    category: 'design'
+  },
+  {
+    id: 'design-4',
+    title: 'Fort Collins Trolley New Logo',
+    media: 'Vector Graphics, Illustrator, 2023',
+    description: 'New, modern, logo for the Fort Collins Municipal Railway.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/TrolleyNewLogo.jpg',
+    category: 'design'
+  },
+  {
+    id: 'design-5',
+    title: 'Fort Collins Trolley New Logo - dark',
+    media: 'Vector Graphics, Illustrator, 2023',
+    description: 'New, modern, logo for the Fort Collins Municipal Railway.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/TrolleyDarkLogo.jpg',
+    category: 'design'
+  },
+  {
+    id: 'design-6',
+    title: 'Fort Collins Trolley - Alternate Branding',
+    media: 'Vector Graphics, Illustrator, 2023',
+    description: 'Several alternate branding graphics for the Fort Collins Municipal Railway.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/TrolleyAltBrand.jpg',
+    category: 'design'
+  },
+
   // Photography
   {
     id: 'photo-1',

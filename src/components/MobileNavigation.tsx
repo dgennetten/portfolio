@@ -1,6 +1,6 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { Home, Pencil, Brush, Box, DraftingCompass, Camera, User } from 'lucide-react';
+import { Home, Pencil, Brush, Box, DraftingCompass, PenTool, Aperture, User } from 'lucide-react';
 
 const MobileNavigation: React.FC = () => {
   return (
@@ -83,13 +83,25 @@ const MobileNavigation: React.FC = () => {
           </li>
           <li className="flex-1">
             <NavLink 
+              to="/gallery/design"
+              className={({ isActive }) => `
+                flex flex-col items-center py-3 
+                ${isActive ? 'text-black' : 'text-gray-500'}
+              `}
+            >
+              <PenTool size={20} />
+              <span className="text-xs mt-1">Design</span>
+            </NavLink>
+          </li>
+          <li className="flex-1">
+            <NavLink 
               to="/gallery/photography"
               className={({ isActive }) => `
                 flex flex-col items-center py-3 
                 ${isActive ? 'text-black' : 'text-gray-500'}
               `}
             >
-              <Camera size={20} />
+              <Aperture size={20} />
               <span className="text-xs mt-1">Click</span>
             </NavLink>
           </li>
