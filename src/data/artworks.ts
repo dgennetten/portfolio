@@ -18,6 +18,23 @@ export const artworks: Artwork[] = [
     imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/TorseAntiqve.jpg',
     category: 'drawings'
   },
+  {
+    id: 'drawing-3',
+    title: 'Untitled',
+    media: 'Charcoal on paper, 28 x 36cm, 2024',
+    description: 'Quick evening sketch at 3square Art Studio, Fort Collins, CO.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/Untitled022024.jpg',
+    category: 'drawings'
+  },
+  {
+    id: 'drawing-4',
+    title: 'Favstine',
+    media: 'Pencil on paper, 28 x 36cm, 2024',
+    description: 'Classic Bargue cast drawing.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/Favstine.jpg',
+    category: 'drawings'
+  },
+
 
   // Paintings
   {
@@ -401,7 +418,16 @@ export const artworks: Artwork[] = [
     description: 'One of the many beautiful sunrises over Trappers Lake, Northern Colorado.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Photography/SunriseOverTrappersLake2.jpg',
     category: 'photography'
+  },
+  {
+    id: 'photo-4',
+    title: 'Untitled',
+    media: 'Digital photography, Nikon D300, 2009`',
+    description: 'Cannot recall name of monument, Tokyo, Japan.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Photography/Tokyo02232009.jpg',
+    category: 'photography'
   }
+
 
 ];
 
