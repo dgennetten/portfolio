@@ -413,7 +413,7 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'design-3',
-    title: 'Abstract Poster Design',
+    title: 'Laser-engraved Coasters',
     media: 'Vector Graphics, Illustrator, 2024',
     description: 'A sampling of coasters in use.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Designs/ThursdayPints3.jpg',
