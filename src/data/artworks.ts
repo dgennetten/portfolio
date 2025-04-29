@@ -363,18 +363,18 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'geometric-14',
-    title: 'Untitled',
-    media: 'Paper Polyhedrons, 1999',
-    description: 'Modular origami polyhedrons made from origami paper squares.',
-    imageSrc: 'https://gennetten.org/PortfolioImages/Geometric/PaperPolyhedrons.jpg',
+    title: 'Hand-built Clay Light Shade',
+    media: 'Fired Hand-built Clay, 15 x 15cm, 2024',
+    description: 'Geometric Pattern, hand-built light shade.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Geometric/GeometricLightShade.jpg',
     category: 'geometric'
   },
   {
     id: 'geometric-15',
-    title: 'Computer Generated Sundial',
-    media: 'Ink on Paper. 25 x 60cm, 1985-2024',
-    description: 'Accurate to 30 seconds, algorithmically generated, xy plotter.',
-    imageSrc: 'https://gennetten.org/PortfolioImages/Geometric/SundialOnDeck.jpg',
+    title: 'Untitled',
+    media: 'Paper Polyhedrons, 1999',
+    description: 'Modular origami polyhedrons made from origami paper squares.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Geometric/PaperPolyhedrons.jpg',
     category: 'geometric'
   },
   {
@@ -413,6 +413,14 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'design-3',
+    title: 'Abstract Poster Design',
+    media: 'Vector Graphics, Illustrator, 2024',
+    description: 'A sampling of coasters in use.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/ThursdayPints3.jpg',
+    category: 'design'
+  },
+  {
+    id: 'design-4',
     title: 'Water Works Logo',
     media: 'Vector Graphics, Illustrator, 2024',
     description: 'New Logo for 1883 Water Works, a local historical landmark (design not accpted!).',
@@ -420,30 +428,38 @@ export const artworks: Artwork[] = [
     category: 'design'
   },
   {
-    id: 'design-4',
+    id: 'design-5',
     title: 'Fort Collins Trolley New Logo',
-    media: 'Vector Graphics, Illustrator, 2023',
+    media: 'Vector Graphics, Illustrator, 2022',
     description: 'New, modern, logo for the Fort Collins Municipal Railway.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Designs/TrolleyNewLogo.jpg',
     category: 'design'
   },
   {
-    id: 'design-5',
+    id: 'design-6',
     title: 'Fort Collins Trolley New Logo - dark',
-    media: 'Vector Graphics, Illustrator, 2023',
+    media: 'Vector Graphics, Illustrator, 2022',
     description: 'New, modern, logo for the Fort Collins Municipal Railway.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Designs/TrolleyDarkLogo.jpg',
     category: 'design'
   },
   {
-    id: 'design-6',
+    id: 'design-7',
     title: 'Fort Collins Trolley - Alternate Branding',
-    media: 'Vector Graphics, Illustrator, 2023',
+    media: 'Vector Graphics, Illustrator, 2022',
     description: 'Several alternate branding graphics for the Fort Collins Municipal Railway.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Designs/TrolleyAltBrand.jpg',
     category: 'design'
   },
-
+  {
+    id: 'design-8',
+    title: 'Computer Generated Sundial',
+    media: 'Ink on Paper. 25 x 60cm, 1985-2024',
+    description: 'Accurate to 30 seconds, algorithmically generated, xy plotter.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/SundialOnDeck.jpg',
+    category: 'design'
+  },
+ 
   // Photography
   {
     id: 'photo-1',
