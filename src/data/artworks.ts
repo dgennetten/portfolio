@@ -466,6 +466,14 @@ export const artworks: Artwork[] = [
     imageSrc: 'https://gennetten.org/PortfolioImages/Designs/WaterWorks.jpg',
     category: 'design'
   },
+  {
+    id: 'design-10',
+    title: 'Analemic Sundial',
+    media: 'Vector Graphics, Computer generated, 1985-2024',
+    description: 'Accurate to 30 seconds, algorithmically generated, xy plotter.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/SundialOnDeck.jpg',
+    category: 'design'
+  },
 
   // Photography
   {
