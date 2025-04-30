@@ -22,13 +22,13 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           <div className="text-xl font-light tracking-wide">
             <NavLink to="/" className="hover:opacity-70 transition-opacity duration-200">
-              K. Douglas Gennetten
+              Douglas Gennetten
             </NavLink>
           </div>
           
           <nav>
             <ul className="flex gap-8">
-              <li>
+              {/* <li>
                 <NavLink 
                   to="/"
                   className={({ isActive }) => 
@@ -39,7 +39,7 @@ const Navigation: React.FC = () => {
                 >
                   Home
                 </NavLink>
-              </li>
+              </li> */}
               <li>
                 <NavLink 
                   to="/gallery/drawings"
@@ -85,7 +85,7 @@ const Navigation: React.FC = () => {
                       : 'text-gray-600 hover:text-black transition-colors duration-200'
                   }
                 >
-                  Geometric
+                  Geometrics
                 </NavLink>
               </li>
               <li>
@@ -97,7 +97,7 @@ const Navigation: React.FC = () => {
                       : 'text-gray-600 hover:text-black transition-colors duration-200'
                   }
                 >
-                  Design
+                  Designs
                 </NavLink>
               </li>
               <li>
@@ -109,7 +109,7 @@ const Navigation: React.FC = () => {
                       : 'text-gray-600 hover:text-black transition-colors duration-200'
                   }
                 >
-                  Photography
+                  Photographs
                 </NavLink>
               </li>
               <li>

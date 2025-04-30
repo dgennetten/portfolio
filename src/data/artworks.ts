@@ -14,7 +14,7 @@ export const artworks: Artwork[] = [
     id: 'drawing-2',
     title: 'Torse Antiqve',
     media: 'Charcoal on paper, 28 x 36cm, 2024',
-    description: 'Intimate torso study of a classic Bargue cast drawing.',
+    description: 'Intimate torso study of a classic Bargue cast drawing. Studies at Umbra Academy of Realist Art, Loveland, CO.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/TorseAntiqve.jpg',
     category: 'drawings'
   },
@@ -30,7 +30,7 @@ export const artworks: Artwork[] = [
     id: 'drawing-4',
     title: 'Favstine',
     media: 'Pencil on paper, 28 x 36cm, 2024',
-    description: 'Classic Bargue cast drawing.',
+    description: 'Classic Bargue cast drawing. Studies at Umbra Academy of Realist Art, Loveland, CO.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/Favstine.jpg',
     category: 'drawings'
   },
@@ -73,10 +73,10 @@ export const artworks: Artwork[] = [
   // Sculptures
   {
     id: 'sculpture-1',
-    title: 'Alabaster Tears',
-    media: 'Colorado ALabaster, 20 x 31cm, 2024',
+    title: 'Untitled',
+    media: 'Hand-Built Fired Clay, 20 x 31cm, 2024',
     description: 'Abstract figurative, created for the MASKS exhibit at the Fort Collins Museum of Art.',
-    imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/AlabasterTears.jpg',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/ClayMask.jpg',
     category: 'sculptures'
   },
   {
@@ -154,7 +154,7 @@ export const artworks: Artwork[] = [
   {
     id: 'sculpture-11',
     title: 'Untitled',
-    media: 'Colorado Alabaster, 30cm, 2008',
+    media: 'Alabaster, 30cm, 2008',
     description: 'Alabaster mask encased in a ribbon a la Escher.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/AlabasterMask1.jpg',
     category: 'sculptures'
@@ -399,7 +399,7 @@ export const artworks: Artwork[] = [
     id: 'design-1',
     title: 'New Logo/Coaster for Thursday Pints group',
     media: 'Vector Graphics, Illustrator, 2024',
-    description: 'A play on the hp logo (dont tell), this logo is for a group of friends who meet every Thursday for Pints.',
+    description: 'A play on the hp logo (dont tell), this logo is for a group of old hp friends who meet every Thursday for Pints.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Designs/ThursdayPints1.jpg',
     category: 'design'
   },
@@ -453,8 +453,16 @@ export const artworks: Artwork[] = [
   },
   {
     id: 'design-8',
+    title: 'Various Trolley Coasters',
+    media: 'Wood, Leather, Rubber. 2022',
+    description: 'Having fun on the laser down at the maker space!',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/TrolleyCoasters.jpg',
+    category: 'design'
+  },
+  {
+    id: 'design-9',
     title: 'Computer Generated Sundial',
-    media: 'Ink on Paper. 25 x 60cm, 1985-2024',
+    media: 'Vector graphics, Ink on Paper. 25 x 60cm, 1985-2024',
     description: 'Accurate to 30 seconds, algorithmically generated, xy plotter.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Designs/SundialOnDeck.jpg',
     category: 'design'
@@ -492,15 +500,24 @@ export const artworks: Artwork[] = [
     description: 'Cannot recall name of monument, Tokyo, Japan.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Photography/Tokyo02232009.jpg',
     category: 'photography'
+  },
+  {
+    id: 'photo-5',
+    title: 'Untitled',
+    media: 'Digital photography, Olympus prototype, 1999`',
+    description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Photography/Tokyo10231999.jpg',
+    category: 'photography'
   }
+
 
 
 ];
 
 export const featuredArtworks: Artwork[] = [
   artworks.find(art => art.id === 'drawing-1')!,
-  artworks.find(art => art.id === 'painting-1')!,
-  artworks.find(art => art.id === 'sculpture-11')!,
+  artworks.find(art => art.id === 'design-7')!,
+  artworks.find(art => art.id === 'sculpture-13')!,
 ];
 
 export const getCategoryArtworks = (category: string) => {
