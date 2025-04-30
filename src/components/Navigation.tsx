@@ -22,7 +22,7 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           <div className="text-xl font-light tracking-wide">
             <NavLink to="/" className="hover:opacity-70 transition-opacity duration-200">
-              K. Douglas Gennetten
+              Douglas Gennetten
             </NavLink>
           </div>
           
