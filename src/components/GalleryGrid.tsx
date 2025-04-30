@@ -8,9 +8,9 @@ const categoryNames: Record<Category, string> = {
   drawings: 'Drawings',
   paintings: 'Paintings',
   sculptures: 'Sculptures',
-  geometric: 'Geometric',
-  design: 'Design',
-  photography: 'Photography'
+  geometric: 'Geometrics',
+  design: 'Designs',
+  photography: 'Photographs'
 };
 
 const GalleryGrid: React.FC = () => {

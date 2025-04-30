@@ -14,7 +14,7 @@ export const artworks: Artwork[] = [
     id: 'drawing-2',
     title: 'Torse Antiqve',
     media: 'Charcoal on paper, 28 x 36cm, 2024',
-    description: 'Intimate torso study of a classic Bargue cast drawing. Studies at Umbra Academy of Realist Art, Loveland, CO. Studies at Umbra Academy of Realist Art. Loveland, CO.',
+    description: 'Intimate torso study of a classic Bargue cast drawing. Studies at Umbra Academy of Realist Art, Loveland, CO.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/TorseAntiqve.jpg',
     category: 'drawings'
   },
@@ -34,7 +34,6 @@ export const artworks: Artwork[] = [
     imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/Favstine.jpg',
     category: 'drawings'
   },
-
 
   // Paintings
   {
@@ -397,38 +396,6 @@ export const artworks: Artwork[] = [
   // Design
   {
     id: 'design-1',
-    title: 'New Logo/Coaster for Thursday Pints group',
-    media: 'Vector Graphics, Illustrator, 2024',
-    description: 'A play on the hp logo (dont tell), this logo is for a group of old hp friends who meet every Thursday for Pints.',
-    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/ThursdayPints1.jpg',
-    category: 'design'
-  },
-  {
-    id: 'design-2',
-    title: 'Laser-engraved Coaster for Thursday Pints group',
-    media: 'Vector Graphics, Illustrator, 2024',
-    description: 'Made dozens of these with leather scraps for the group',
-    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/ThursdayPints2.jpg',
-    category: 'design'
-  },
-  {
-    id: 'design-3',
-    title: 'Laser-engraved Coasters',
-    media: 'Vector Graphics, Illustrator, 2024',
-    description: 'A sampling of coasters in use.',
-    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/ThursdayPints3.jpg',
-    category: 'design'
-  },
-  {
-    id: 'design-4',
-    title: 'Water Works Logo',
-    media: 'Vector Graphics, Illustrator, 2024',
-    description: 'New Logo for 1883 Water Works, a local historical landmark (design not accpted!).',
-    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/WaterWorks.jpg',
-    category: 'design'
-  },
-  {
-    id: 'design-5',
     title: 'Fort Collins Trolley New Logo',
     media: 'Vector Graphics, Illustrator, 2022',
     description: 'New, modern, logo for the Fort Collins Municipal Railway.',
@@ -436,7 +403,7 @@ export const artworks: Artwork[] = [
     category: 'design'
   },
   {
-    id: 'design-6',
+    id: 'design-2',
     title: 'Fort Collins Trolley New Logo - dark',
     media: 'Vector Graphics, Illustrator, 2022',
     description: 'New, modern, logo for the Fort Collins Municipal Railway.',
@@ -444,7 +411,7 @@ export const artworks: Artwork[] = [
     category: 'design'
   },
   {
-    id: 'design-7',
+    id: 'design-3',
     title: 'Fort Collins Trolley - Alternate Branding',
     media: 'Vector Graphics, Illustrator, 2022',
     description: 'Several alternate branding graphics for the Fort Collins Municipal Railway.',
@@ -452,7 +419,7 @@ export const artworks: Artwork[] = [
     category: 'design'
   },
   {
-    id: 'design-8',
+    id: 'design-4',
     title: 'Various Trolley Coasters',
     media: 'Wood, Leather, Rubber. 2022',
     description: 'Having fun on the laser down at the maker space!',
@@ -460,14 +427,46 @@ export const artworks: Artwork[] = [
     category: 'design'
   },
   {
-    id: 'design-9',
+    id: 'design-5',
     title: 'Computer Generated Sundial',
     media: 'Vector graphics, Ink on Paper. 25 x 60cm, 1985-2024',
     description: 'Accurate to 30 seconds, algorithmically generated, xy plotter.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Designs/SundialOnDeck.jpg',
     category: 'design'
   },
- 
+  {
+    id: 'design-6',
+    title: 'New Logo/Coaster for Thursday Pints group',
+    media: 'Vector Graphics, Illustrator, 2024',
+    description: 'A play on the hp logo (dont tell), this logo is for a group of old hp friends who meet every Thursday for Pints.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/ThursdayPints1.jpg',
+    category: 'design'
+  },
+  {
+    id: 'design-7',
+    title: 'Laser-engraved Coaster for Thursday Pints group',
+    media: 'Vector Graphics, Illustrator, 2024',
+    description: 'Made dozens of these with leather scraps for the group',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/ThursdayPints2.jpg',
+    category: 'design'
+  },
+  {
+    id: 'design-8',
+    title: 'Laser-engraved Coasters',
+    media: 'Vector Graphics, Illustrator, 2024',
+    description: 'A sampling of coasters in use.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/ThursdayPints3.jpg',
+    category: 'design'
+  },
+  {
+    id: 'design-9',
+    title: 'Water Works Logo',
+    media: 'Vector Graphics, Illustrator, 2024',
+    description: 'New Logo for 1883 Water Works, a local historical landmark (design not accpted!).',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Designs/WaterWorks.jpg',
+    category: 'design'
+  },
+
   // Photography
   {
     id: 'photo-1',
@@ -509,9 +508,6 @@ export const artworks: Artwork[] = [
     imageSrc: 'https://gennetten.org/PortfolioImages/Photography/Tokyo10231999.jpg',
     category: 'photography'
   }
-
-
-
 ];
 
 export const featuredArtworks: Artwork[] = [
