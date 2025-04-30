@@ -14,7 +14,7 @@ export const artworks: Artwork[] = [
     id: 'drawing-2',
     title: 'Torse Antiqve',
     media: 'Charcoal on paper, 28 x 36cm, 2024',
-    description: 'Intimate torso study of a classic Bargue cast drawing. Studies at Umbra Academy of Realist Art, Loveland, CO.',
+    description: 'Intimate torso study of a classic Bargue cast drawing. Studies at Umbra Academy of Realist Art, Loveland, CO. Studies at Umbra Academy of Realist Art. Loveland, CO.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/TorseAntiqve.jpg',
     category: 'drawings'
   },
@@ -49,7 +49,7 @@ export const artworks: Artwork[] = [
     id: 'painting-2',
     title: 'Untitled',
     media: 'Oil on panel, 8 x 8 inches, 2023',
-    description: 'Oil on canvas impressionist landscape painting.',
+    description: 'Oil on canvas impressionist landscape painting. An evening at 3Square Art Studio, Fort Collins, CO.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Paintings/ImpressionistLandscapeOil11_23.jpg',
     category: 'paintings'
   },
@@ -57,7 +57,7 @@ export const artworks: Artwork[] = [
     id: 'painting-3',
     title: 'Bessie',
     media: 'Pen and Watercolor, 20 x 20cm, 2021',
-    description: 'Experimental airbrushed guache painting from way back!',
+    description: 'From a quick online training session with the amazing artist, Ian Fennelly',
     imageSrc: 'https://gennetten.org/PortfolioImages/Paintings/Bessie.jpg',
     category: 'paintings'
   },
