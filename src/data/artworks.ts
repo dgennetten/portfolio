@@ -507,12 +507,59 @@ export const artworks: Artwork[] = [
     description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Photography/Tokyo10231999.jpg',
     category: 'photography'
+  },
+
+    // WIP Drawings
+  {
+    id: 'WIPdrawing-1',
+    title: 'Belvedere',
+    media: 'Charcoal on paper, 18 x 24 inches',
+    description: 'In progress, charcoal drawing of the Belvedere Torlonia, a classical sculpture. (this is harder than it looks!)',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/Belvedere.jpg',
+    category: 'WIPdrawings'
+  },
+
+    // WIP Sculptures
+  {
+    id: 'WIPsculpture-1',
+    title: 'David\s Nose',
+    media: 'Clay, 11 x 20cm',
+    description: 'In progress, clay sculpture of the nose of Michelangelo\'s David. Working toward excellence at the Melanie Furtado Sculpture Atelier, Paris, France.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/DavidsNose.jpg',
+    category: 'WIPsculptures'
+  },
+ 
+   // WIP Kinetic Sculptures
+  {
+    id: 'WIPkinetics-1',
+    title: 'Kinetic Ripples',
+    media: 'Motorized kinetic sculpture.',
+    description: 'Eventually, this will be a motorized kinetic sculpture that simulates ripples radiating from a droplet, using 100 oscilating plexiglass cylinders',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Kinetics/KineticRipples.jpg',
+    category: 'WIPkinetics'
+  },
+  {
+    id: 'WIPkinetics-2',
+    title: 'Kinetic Ripples',
+    media: 'Motorized kinetic sculpture.',
+    description: 'Eventually, this will be a motorized kinetic sculpture that simulates ripples radiating from a droplet, using 100 oscilating plexiglass cylinders',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Kinetics/KineticRipples.mp4',
+    category: 'WIPkinetics'
+  },
+  {
+    id: 'WIPkinetics-3',
+    title: 'Kinetic Rain II',
+    media: 'Motorized kinetic sculpture.',
+    description: 'Eventually, this will be a motorized kinetic sculpture that is a drastically scaled down verions of the Kinetic Rain sculpture at Changi Airport, Singapore. (google it!)',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Kinetics/KineticRainII.mp4',
+    category: 'WIPkinetics'
   }
+ 
 ];
 
 export const featuredArtworks: Artwork[] = [
   artworks.find(art => art.id === 'drawing-1')!,
-  artworks.find(art => art.id === 'design-7')!,
+  artworks.find(art => art.id === 'geometric-8')!,
   artworks.find(art => art.id === 'sculpture-13')!,
 ];
 

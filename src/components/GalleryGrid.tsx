@@ -10,7 +10,10 @@ const categoryNames: Record<Category, string> = {
   sculptures: 'Sculptures',
   geometric: 'Geometrics',
   design: 'Designs',
-  photography: 'Photographs'
+  photography: 'Photographs',
+  WIPdrawings: 'Works In Progress - Drawings',
+  WIPsculptures: 'Works In Progress - Sculptures',
+  WIPkinetics: 'Works In Progress - Kinetic Sculptures',
 };
 
 const GalleryGrid: React.FC = () => {
@@ -56,12 +59,20 @@ const GalleryGrid: React.FC = () => {
             onClick={() => openModal(artwork)}
           >
             <div className="relative aspect-square overflow-hidden mb-4 rounded-lg">
-              <img 
-                src={artwork.imageSrc} 
-                alt={artwork.title}
-                className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
-                loading="lazy"
-              />
+              {artwork.imageSrc.endsWith('.mp4') ? (
+                <video
+                  src={artwork.imageSrc}
+                  controls
+                  className="w-full h-full object-cover rounded-lg"
+                />
+              ) : (
+                <img 
+                  src={artwork.imageSrc} 
+                  alt={artwork.title}
+                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-105"
+                  loading="lazy"
+                />
+              )}
               <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all duration-300 rounded-lg"></div>
             </div>
             <h3 className="text-xl font-medium mb-1">{artwork.title}</h3>

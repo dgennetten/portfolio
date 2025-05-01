@@ -4,7 +4,7 @@ export interface Artwork {
   media: string;
   description: string;
   imageSrc: string;
-  category: 'drawings' | 'paintings' | 'sculptures' | 'geometric' | 'design' | 'photography';
+  category: 'drawings' | 'paintings' | 'sculptures' | 'geometric' | 'design' | 'photography' | 'WIPdrawings' | 'WIPsculptures' | 'WIPkinetics';
 }
 
-export type Category = 'drawings' | 'paintings' | 'sculptures' | 'geometric' | 'design' | 'photography';
+export type Category = 'drawings' | 'paintings' | 'sculptures' | 'geometric' | 'design' | 'photography' | 'WIPdrawings' | 'WIPsculptures' | 'WIPkinetics';

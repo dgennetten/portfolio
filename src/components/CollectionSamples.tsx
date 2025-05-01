@@ -1,10 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { featuredArtworks } from '../data/artworks';
+import { Component } from 'lucide-react'; // Import the Component icon from lucide-react
 
 const CollectionSamples: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-16">
+      {/* Centered Lucide Component icon above the heading */}
+      <div className="flex justify-center items-center mb-8">
+        <Component className="text-red-600 w-16 h-16" /> {/* Red and large icon */}
+      </div>
       <h2 className="text-3xl md:text-4xl font-light text-center mb-12">Collection Samples</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         {featuredArtworks.map((artwork) => (
@@ -28,11 +33,14 @@ const CollectionSamples: React.FC = () => {
           </div>
         ))}
       </div>
-      <div className="container mx-auto px-4 ">
-        
+      <div className="container mx-auto px-4">
+        {/* Centered Lucide Component icon */}
+        <div className="flex justify-center items-center my-12">
+          <Component className="text-red-600 w-16 h-16" /> {/* Red and large icon */}
+        </div>
         <div className="flex space-x-4 items-center justify-center mt-12 py-0">
           <h4 className="text-3xl md:text-4xl font-light text-center mb-0">All Collections</h4>
-          </div>
+        </div>
         <div className="flex flex-wrap gap-4 items-center justify-center mt-12 mb-12 py-0">
           <Link
             to="/gallery/drawings"
@@ -58,7 +66,7 @@ const CollectionSamples: React.FC = () => {
           >
             Geometrics
           </Link>
-           <Link
+          <Link
             to="/gallery/design"
             className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
           >
@@ -71,6 +79,35 @@ const CollectionSamples: React.FC = () => {
             Photographs
           </Link>
         </div>
+      </div>
+      <div className="container mx-auto px-4">
+        {/* Centered Lucide Component icon */}
+        <div className="flex justify-center items-center my-12">
+          <Component className="text-red-600 w-16 h-16" /> {/* Red and large icon */}
+        </div>
+        <div className="flex space-x-4 items-center justify-center mt-12 py-0">
+          <h4 className="text-3xl md:text-4xl font-light text-center mb-0">Works In Progress</h4>
+        </div>
+        <div className="flex flex-wrap gap-4 items-center justify-center mt-12 mb-12 py-0">
+          <Link
+            to="/gallery/WIPdrawings"
+            className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
+          >
+            WIP Drawings
+          </Link>
+          <Link
+            to="/gallery/WIPsculptures"
+            className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
+          >
+            WIP Sculptures
+          </Link>
+          <Link
+            to="/gallery/WIPkinetics"
+            className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
+          >
+            WIP Kinetic Sculptures
+          </Link>
+       </div>
       </div>
     </div>
   );
