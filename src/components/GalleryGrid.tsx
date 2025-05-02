@@ -77,7 +77,10 @@ const GalleryGrid: React.FC = () => {
             </div>
             <h3 className="text-xl font-medium mb-1">{artwork.title}</h3>
             <p className="text-gray-600 mb-2">{artwork.media}</p>
-            <p className="text-gray-500 text-sm">{artwork.description}</p>
+            <p 
+              className="text-gray-500 text-sm"
+              dangerouslySetInnerHTML={{ __html: artwork.description }}
+            ></p>
           </div>
         ))}
       </div>

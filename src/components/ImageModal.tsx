@@ -131,14 +131,18 @@ const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onCl
           <div className="text-center mt-4">
             <h3 className="text-xl font-medium text-white">{artwork.title}</h3>
             <p className="text-gray-300">{artwork.media}</p>
-            <p className="text-gray-400 mt-1">{artwork.description}</p>
+            <div className="text-gray-400 mt-1">
+              <p dangerouslySetInnerHTML={{ __html: artwork.description }}></p>
+            </div>
           </div>
         ) : (
           // Overlay text for non-wide media
           <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
             <h3 className="text-xl font-medium">{artwork.title}</h3>
             <p className="text-gray-300">{artwork.media}</p>
-            <p className="text-gray-400 mt-1">{artwork.description}</p>
+            <div className="text-gray-400 mt-1">
+              <p dangerouslySetInnerHTML={{ __html: artwork.description }}></p>
+            </div>
           </div>
         )}
       </div>

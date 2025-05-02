@@ -558,15 +558,15 @@ export const artworks: Artwork[] = [
     id: 'WIPkinetics-3',
     title: 'Kinetic Ripples (view on desktop -- having issues with mobile',
     media: 'Motorized kinetic sculpture.',
-    description: 'Eventually, this will be a motorized kinetic sculpture that simulates ripples radiating from a droplet, using 100 oscilating plexiglass cylinders',
+    description: 'Imagine a 1 inch diameter 8 inch high cylinder, oscillating up and down at 1Hz. Now imagine 100 of them, each hanging from one of the hundred tiny holes you see, all oscillating to form a radiating ripple pattern.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Kinetics/KineticRipples2.mp4',
     category: 'WIPkinetics'
   },
   {
     id: 'WIPkinetics-4',
-    title: 'Kinetic Rain II (view on desktop -- having issues with mobile',
+    title: 'Kinetic Rain II',
     media: 'Motorized kinetic sculpture.',
-    description: 'Eventually, this will be a motorized kinetic sculpture that is a drastically scaled down verions of the Kinetic Rain sculpture at Changi Airport, Singapore. (google it!)',
+    description: 'Eventually, this will be a motorized kinetic sculpture that is a drastically scaled-down version of the Kinetic Rain sculpture at Changi Airport, Singapore. <a href="https://www.youtube.com/watch?v=NXuQnDeIyY8" target="_blank" rel="noopener noreferrer" style="color: #1d4ed8; text-decoration: underline;">Learn more</a>',
     imageSrc: 'https://gennetten.org/PortfolioImages/Kinetics/KineticRainII.mp4',
     category: 'WIPkinetics'
   }
