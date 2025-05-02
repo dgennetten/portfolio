@@ -526,6 +526,15 @@ export const artworks: Artwork[] = [
     imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/Belvedere.jpg',
     category: 'WIPdrawings'
   },
+  {
+    id: 'WIPdrawing-2',
+    title: 'Hunter',
+    media: 'Pencil on paper, 18 x 24 inches',
+    description: 'In progress, drawing of live model, Hunter. Umbra Academy of Realist Art, Loveland, CO.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/Hunter.jpg',
+    category: 'WIPdrawings'
+  },
+
 
     // WIP Sculptures
   {
