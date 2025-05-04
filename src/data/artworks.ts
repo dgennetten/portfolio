@@ -542,10 +542,37 @@ export const artworks: Artwork[] = [
     title: 'David\s Nose',
     media: 'Clay, 11 x 20cm',
     description: 'In progress, clay sculpture of the nose of Michelangelo\'s David. Working toward excellence at the Melanie Furtado Sculpture Atelier, Paris, France.',
-    imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/DavidsNose.jpg',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/DavidsNose1.jpg',
+    category: 'WIPsculptures'
+  },
+  {
+    id: 'WIPsculpture-2',
+    title: 'David\s Nose',
+    media: 'Clay, 11 x 20cm',
+    description: 'In progress, clay sculpture of the nose of Michelangelo\'s David. Working toward excellence at the Melanie Furtado Sculpture Atelier, Paris, France.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/DavidsNose2.jpg',
+    category: 'WIPsculptures'
+  },
+  {
+    id: 'WIPsculpture-3',
+    title: 'David\s Nose',
+    media: 'Clay, 11 x 20cm',
+    description: 'In progress, clay sculpture of the nose of Michelangelo\'s David. Working toward excellence at the Melanie Furtado Sculpture Atelier, Paris, France.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/DavidsNose3.jpg',
+    category: 'WIPsculptures'
+  },
+  {
+    id: 'WIPsculpture-4',
+    title: 'David\s Nose',
+    media: 'Clay, 11 x 20cm',
+    description: 'In progress, clay sculpture of the nose of Michelangelo\'s David. Working toward excellence at the Melanie Furtado Sculpture Atelier, Paris, France.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Sculptures/DavidsNose4.jpg',
     category: 'WIPsculptures'
   },
  
+
+
+
    // WIP Kinetic Sculptures
   {
     id: 'WIPkinetics-1',
