@@ -37,7 +37,13 @@ const ArtistBio: React.FC = () => {
           <div className="md:w-2/3">
             <p className="text-lg mb-6 leading-relaxed">
               After postponing my artistic pursuits during a 40-year engineering career, retirement has opened a new
-              chapter—one filled with the joy of art creation.
+              chapter—one filled with the joy of art creation, self-discovery, and endless learning. Initially, this 
+              page was a simple,if somewhat stuffy, attempt to create an artists bio. But as I began to explore the
+              worlds of art, science and mathemnatics, I realized that my journey was not just about the art itself, but about the
+              connections I was making along the way. I have come to understand that art is not just a solitary pursuit, but a
+              shared experience that transcends boundaries and connects us all. I am grateful for the opportunity to share my work with you,
+              and I hope that it resonates with you in some way. I invite you to join me on this journey of exploration and discovery, 
+              as we navigate the worlds of art, science, and mathematics together.
             </p>
 
             <p className="text-lg mb-6 leading-relaxed">
@@ -49,14 +55,17 @@ const ArtistBio: React.FC = () => {
             </p>
 
             <p className="text-lg mb-6 leading-relaxed">
-              My approach combines traditional techniques with contemporary themes, exploring the
-              relationship between natural forms and geometric patterns, often incorporating elements
-              of mathematical precision alongside organic spontaneity. These diverse influences intertwine,
-              shaping a body of work that merges technical precision with
-              artistic expression, structure with emotion, and logic with creativity.
+              Years ago, around the birth of weblogs (blogs), I created a website to share my thoughts and ideas. It was
+              called 'Foolscap' and was a place where I could express myself freely. Very few people visited, but I found it to be a
+              valuable outlet. I have since moved on to other platforms, but the name 'Foolscap' has stuck with me. 
+              Foolscap refers to a paper size that was traditionally used in Europe and the British Commonwealth before the adoption 
+              of the A4 standard. The name comes from an old watermark depicting a fools cap, which was commonly used on paper 
+              in the 15th century.
             </p>
 
             <p className="text-lg leading-relaxed">
+              I'm thinking this page will become an extension of my old Foolscap site, a place to share my thoughts and ideas about art, 
+              science, and mathematics. 
 
             </p>
           </div>
