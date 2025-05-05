@@ -14,6 +14,7 @@ const categoryNames: Record<Category, string> = {
   WIPdrawings: 'Works In Progress - Drawings',
   WIPsculptures: 'Works In Progress - Sculptures',
   WIPkinetics: 'Works In Progress - Kinetic Sculptures',
+  WIPprints: 'Works In Progress - Prints',
 };
 
 const GalleryGrid: React.FC = () => {
