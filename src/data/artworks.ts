@@ -47,13 +47,21 @@ export const artworks: Artwork[] = [
   {
     id: 'painting-2',
     title: 'Untitled',
+    media: 'Oil on panel, 15 × 20cm, 2024',
+    description: 'Still life study of lemons. An evening at 3Square Art Studio, Fort Collins, CO.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Paintings/LemonsOnPanel.jpg',
+    category: 'paintings'
+  },
+  {
+    id: 'painting-3',
+    title: 'Untitled',
     media: 'Oil on panel, 8 x 8 inches, 2023',
     description: 'Oil on canvas impressionist landscape painting. An evening at 3Square Art Studio, Fort Collins, CO.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Paintings/ImpressionistLandscapeOil11_23.jpg',
     category: 'paintings'
   },
   {
-    id: 'painting-3',
+    id: 'painting-4',
     title: 'Bessie',
     media: 'Pen and Watercolor, 20 x 20cm, 2021',
     description: 'From a quick online training session with the amazing artist, Ian Fennelly',
@@ -61,7 +69,15 @@ export const artworks: Artwork[] = [
     category: 'paintings'
   },
   {
-    id: 'painting-4',
+    id: 'painting-5',
+    title: 'Profile in Guache',
+    media: 'Airbrushed Guache, 9 x 12 inches, 1984',
+    description: 'Experimental airbrushed guache painting from way back!',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Paintings/ProfileInGuache.jpg',
+    category: 'paintings'
+  },
+  {
+    id: 'painting-6',
     title: 'Eye in Guache',
     media: 'Airbrushed Guache, 9 x 12 inches, 1983',
     description: 'Experimental airbrushed guache painting from way back!',
