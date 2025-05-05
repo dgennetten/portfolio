@@ -3,6 +3,14 @@ import { Artwork } from '../types';
 export const artworks: Artwork[] = [
   // Drawings
   {
+    id: 'drawing-0',
+    title: 'Untitled',
+    media: 'Charcoal on paper, 18 x 24 inches, 2025',
+    description: 'Live model at Umbra Academy of Realist Art.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/MaleNude.jpg',
+    category: 'drawings'
+  },
+  {
     id: 'drawing-1',
     title: 'Isadore',
     media: 'Charcoal on paper, 28 x 36cm, 2024',
@@ -82,6 +90,14 @@ export const artworks: Artwork[] = [
     media: 'Airbrushed Guache, 9 x 12 inches, 1983',
     description: 'Experimental airbrushed guache painting from way back!',
     imageSrc: 'https://gennetten.org/PortfolioImages/Paintings/EyeInGuache.jpg',
+    category: 'paintings'
+  },
+  {
+    id: 'painting-7',
+    title: 'Untitled',
+    media: 'Oil on panel, 12 x 16 inches, 1973!',
+    description: 'Oil on panel painting of a barn. Project for Art class in highschool.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Paintings/BarnInOil.jpg',
     category: 'paintings'
   },
  
