@@ -36,37 +36,24 @@ const ArtistBio: React.FC = () => {
 
           <div className="md:w-2/3">
             <p className="text-lg mb-6 leading-relaxed">
-              After postponing my artistic pursuits during a 40-year engineering career, retirement has opened a new
-              chapter—one filled with the joy of art creation, self-discovery, and endless learning. Initially, this 
-              page was a simple,if somewhat stuffy, attempt to create an artists bio. But as I began to explore the
-              worlds of art, science and mathemnatics, I realized that my journey was not just about the art itself, but about the
-              connections I was making along the way. I have come to understand that art is not just a solitary pursuit, but a
-              shared experience that transcends boundaries and connects us all. I am grateful for the opportunity to share my work with you,
-              and I hope that it resonates with you in some way. I invite you to join me on this journey of exploration and discovery, 
-              as we navigate the worlds of art, science, and mathematics together.
+              After a long career in engineering, retirement has given me the freedom to pursue my 
+              love for art, self-discovery, and learning.
+              I've come to appreciate that art is not just a personal journey but a shared 
+              experience that connects us in unexpected ways.
             </p>
 
             <p className="text-lg mb-6 leading-relaxed">
-              Initially exploring figurative abstraction in Colorado marble, I now ground my work in classical realism.
-              Training in academy-style ateliers has emboldened my approach, allowing me to delve deeply into realism
-              and portraiture with confidence. At the same time, my lifelong passion for science and mathematics—particularly
-              geometry—continues to fuel my fascination with Islamic art, where intricate patterns and symmetry offer endless
-              inspiration.
+              Starting with figurative abstraction in Colorado marble, I now focus on classical 
+              realism, honing my skills through academy-style atelier training. My lifelong 
+              fascination with science and mathematics—especially geometry—fuels my appreciation 
+              for Islamic art, where intricate patterns and symmetry offer endless inspiration.
             </p>
 
             <p className="text-lg mb-6 leading-relaxed">
-              Years ago, around the birth of weblogs (blogs), I created a website to share my thoughts and ideas. It was
-              called 'Foolscap' and was a place where I could express myself freely. Very few people visited, but I found it to be a
-              valuable outlet. I have since moved on to other platforms, but the name 'Foolscap' has stuck with me. 
-              Foolscap refers to a paper size that was traditionally used in Europe and the British Commonwealth before the adoption 
-              of the A4 standard. The name comes from an old watermark depicting a fools cap, which was commonly used on paper 
-              in the 15th century.
-            </p>
-
-            <p className="text-lg leading-relaxed">
-              I'm thinking this page will become an extension of my old Foolscap site, a place to share my thoughts and ideas about art, 
-              science, and mathematics. 
-
+              Years ago, I created a website called Foolscap as a place to share my thoughts. 
+              Few people visited, but it became an outlet for reflection. The name has stayed 
+              with me, and this page feels like a natural extension of that early project—a space 
+              to explore art, science, and mathematics with an open mind.
             </p>
           </div>
         </div>
