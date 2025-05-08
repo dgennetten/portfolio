@@ -49,13 +49,7 @@ const ArtistBio: React.FC = () => {
               for Islamic art, where intricate patterns and symmetry offer endless inspiration.
             </p>
 
-            <p className="text-lg mb-6 leading-relaxed">
-              Years ago, I created a website called Foolscap as a place to share my thoughts. 
-              Few people visited, but it became an outlet for reflection. The name has stayed 
-              with me, and this page feels like a natural extension of that early project—a space 
-              to explore art, science, and mathematics with an open mind.
-            </p>
-          </div>
+         </div>
         </div>
       </div>
     </div>
