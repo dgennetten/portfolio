@@ -41,15 +41,7 @@ const ArtistBio: React.FC = () => {
               I've come to appreciate that art is not just a personal journey but a shared 
               experience that connects us in unexpected ways.
             </p>
-
-            <p className="text-lg mb-6 leading-relaxed">
-              Starting with figurative abstraction in Colorado marble, I now focus on classical 
-              realism, honing my skills through academy-style atelier training. My lifelong 
-              fascination with science and mathematics—especially geometry—fuels my appreciation 
-              for Islamic art, where intricate patterns and symmetry offer endless inspiration.
-            </p>
-
-         </div>
+          </div>
         </div>
       </div>
     </div>

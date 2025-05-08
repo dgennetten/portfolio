@@ -12,7 +12,6 @@ interface ImageModalProps {
 
 const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onClose, onNavigate }) => {
   const modalRef = useRef<HTMLDivElement>(null);
-  const [isWide, setIsWide] = useState(false); // State to track if the media is wide
   const currentIndex = artworks.findIndex(art => art.id === artwork.id);
   const hasPrevious = currentIndex > 0;
   const hasNext = currentIndex < artworks.length - 1;
@@ -61,22 +60,13 @@ const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onCl
     };
   }, [onClose, hasPrevious, hasNext, handlePrevious, handleNext]);
 
-  const handleMediaLoad = (e: React.SyntheticEvent<HTMLImageElement | HTMLVideoElement>) => {
-    const media = e.currentTarget;
-    if (media instanceof HTMLImageElement) {
-      setIsWide(media.naturalWidth > media.naturalHeight); // Check if the image is wide
-    } else if (media instanceof HTMLVideoElement) {
-      setIsWide(media.videoWidth > media.videoHeight); // Check if the video is wide
-    }
-  };
-
   if (!isOpen) return null;
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
       <div 
         ref={modalRef} 
-        className={`relative max-w-[90vw] max-h-[90vh] flex flex-col items-center ${isWide ? 'justify-center' : ''}`}
+        className="relative max-w-[90vw] max-h-[90vh] flex flex-col items-center"
       >
         <button 
           onClick={onClose}
@@ -107,6 +97,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onCl
           </button>
         )}
         
+        {/* Media */}
         {artwork.imageSrc.endsWith('.mp4') ? (
           <video 
             src={artwork.imageSrc} 
@@ -114,37 +105,24 @@ const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onCl
             autoPlay 
             muted // Required for autoplay on mobile
             playsInline // Allow inline playback on mobile browsers
-            className="max-w-full max-h-[90vh] object-contain"
-            onLoadedMetadata={handleMediaLoad}
+            className="max-w-full max-h-[70vh] object-contain"
           />
         ) : (
           <img 
             src={artwork.imageSrc} 
             alt={artwork.title} 
-            className="max-w-full max-h-[90vh] object-contain"
-            onLoad={handleMediaLoad} // Handle image load to determine aspect ratio
+            className="max-w-full max-h-[70vh] object-contain"
           />
         )}
-        
-        {isWide ? (
-          // Text below the media for wide media
-          <div className="text-center mt-4">
-            <h3 className="text-xl font-medium text-white">{artwork.title}</h3>
-            <p className="text-gray-300">{artwork.media}</p>
-            <div className="text-gray-400 mt-1">
-              <p dangerouslySetInnerHTML={{ __html: artwork.description }}></p>
-            </div>
+
+        {/* Text Below Media */}
+        <div className="text-center mt-4">
+          <h3 className="text-xl font-medium text-white">{artwork.title}</h3>
+          <p className="text-gray-300">{artwork.media}</p>
+          <div className="text-gray-400 mt-1">
+            <p dangerouslySetInnerHTML={{ __html: artwork.description }}></p>
           </div>
-        ) : (
-          // Overlay text for non-wide media
-          <div className="absolute bottom-0 left-0 right-0 bg-black bg-opacity-70 text-white p-4">
-            <h3 className="text-xl font-medium">{artwork.title}</h3>
-            <p className="text-gray-300">{artwork.media}</p>
-            <div className="text-gray-400 mt-1">
-              <p dangerouslySetInnerHTML={{ __html: artwork.description }}></p>
-            </div>
-          </div>
-        )}
+        </div>
       </div>
     </div>
   );
