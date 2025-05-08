@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Artwork } from '../types';
 
 interface ImageModalProps {
@@ -68,43 +67,37 @@ const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onCl
         ref={modalRef} 
         className="relative max-w-[90vw] max-h-[90vh] flex flex-col items-center"
       >
-        <button 
-          onClick={onClose}
-          className="absolute top-2 right-2 z-10 p-1 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70 transition-all duration-200"
-          aria-label="Close modal"
+        {/* Back Button */}
+        <button
+          onClick={handlePrevious}
+          className="fixed top-1/2 left-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 text-2xl font-bold"
         >
-          <X size={24} />
+          &lt;
         </button>
 
-        {/* Navigation Arrows */}
-        {hasPrevious && (
-          <button
-            onClick={handlePrevious}
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70 transition-all duration-200"
-            aria-label="Previous media"
-          >
-            <ChevronLeft size={32} />
-          </button>
-        )}
-        
-        {hasNext && (
-          <button
-            onClick={handleNext}
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-10 p-2 rounded-full bg-black bg-opacity-50 text-white hover:bg-opacity-70 transition-all duration-200"
-            aria-label="Next media"
-          >
-            <ChevronRight size={32} />
-          </button>
-        )}
-        
-        {/* Media */}
+        {/* Forward Button */}
+        <button
+          onClick={handleNext}
+          className="fixed top-1/2 right-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 text-2xl font-bold"
+        >
+          &gt;
+        </button>
+
+        {/* Close Button */}
+        <button
+          onClick={onClose}
+          className="fixed top-4 right-4 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 text-2xl font-bold"
+        >
+          &times;
+        </button>
+
         {artwork.imageSrc.endsWith('.mp4') ? (
           <video 
             src={artwork.imageSrc} 
             controls 
             autoPlay 
-            muted // Required for autoplay on mobile
-            playsInline // Allow inline playback on mobile browsers
+            muted
+            playsInline
             className="max-w-full max-h-[70vh] object-contain"
           />
         ) : (
