@@ -68,20 +68,24 @@ const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onCl
         className="relative max-w-[90vw] max-h-[90vh] flex flex-col items-center"
       >
         {/* Back Button */}
-        <button
-          onClick={handlePrevious}
-          className="fixed top-1/2 left-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 text-2xl font-bold"
-        >
-          &lt;
-        </button>
+        {hasPrevious && (
+          <button
+            onClick={handlePrevious}
+            className="fixed top-1/2 left-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 text-2xl font-bold"
+          >
+            &lt;
+          </button>
+        )}
 
         {/* Forward Button */}
-        <button
-          onClick={handleNext}
-          className="fixed top-1/2 right-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 text-2xl font-bold"
-        >
-          &gt;
-        </button>
+        {hasNext && (
+          <button
+            onClick={handleNext}
+            className="fixed top-1/2 right-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 text-2xl font-bold"
+          >
+            &gt;
+          </button>
+        )}
 
         {/* Close Button */}
         <button
