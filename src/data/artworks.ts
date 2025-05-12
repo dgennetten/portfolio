@@ -5,7 +5,7 @@ export const artworks: Artwork[] = [
   {
     id: 'drawing-0',
     title: 'Hunter',
-    media: 'Charcoal on paper, 18 x 24 inches, 2025',
+    media: 'Pencil on paper, 18 x 24 inches, 2025',
     description: 'A live model study at Umbra Academy of Realist Art, focusing on anatomy and form.',
     imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/HunterNude.jpg',
     category: 'drawings'
