@@ -4,6 +4,14 @@ export const artworks: Artwork[] = [
   // Drawings
   {
     id: 'drawing-0',
+    title: 'Hunter',
+    media: 'Charcoal on paper, 18 x 24 inches, 2025',
+    description: 'A live model study at Umbra Academy of Realist Art, focusing on anatomy and form.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/HunterNude.jpg',
+    category: 'drawings'
+  },
+  {
+    id: 'drawing-1',
     title: 'Untitled',
     media: 'Charcoal on paper, 18 x 24 inches, 2025',
     description: 'Live model at Umbra Academy of Realist Art.',
@@ -11,7 +19,7 @@ export const artworks: Artwork[] = [
     category: 'drawings'
   },
   {
-    id: 'drawing-1',
+    id: 'drawing-2',
     title: 'Isadore',
     media: 'Charcoal on paper, 28 x 36cm, 2024',
     description: 'One of my first portraits under the guidance of Elena Cantor, master classical realism artist and teacher.',
@@ -19,7 +27,7 @@ export const artworks: Artwork[] = [
     category: 'drawings'
   },
   {
-    id: 'drawing-2',
+    id: 'drawing-3',
     title: 'Torse Antiqve',
     media: 'Charcoal on paper, 28 x 36cm, 2024',
     description: 'Intimate torso study of a classic Bargue cast drawing. Studies at Umbra Academy of Realist Art, Loveland, CO.',
@@ -27,7 +35,7 @@ export const artworks: Artwork[] = [
     category: 'drawings'
   },
   {
-    id: 'drawing-3',
+    id: 'drawing-4',
     title: 'Untitled',
     media: 'Charcoal on paper, 28 x 36cm, 2024',
     description: 'Quick evening sketch at 3square Art Studio, Fort Collins, CO.',
@@ -35,7 +43,7 @@ export const artworks: Artwork[] = [
     category: 'drawings'
   },
   {
-    id: 'drawing-4',
+    id: 'drawing-5',
     title: 'Favstine',
     media: 'Pencil on paper, 28 x 36cm, 2024',
     description: 'Classic Bargue cast drawing. Studies at Umbra Academy of Realist Art, Loveland, CO.',
