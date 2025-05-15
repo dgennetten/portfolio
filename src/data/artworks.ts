@@ -4,6 +4,14 @@ export const artworks: Artwork[] = [
   // Drawings
   {
     id: 'drawing-0',
+    title: 'Audra',
+    media: 'Pencil on paper, 11 x 14 inches, 2025',
+    description: 'Another evening at 3Square Art Studio, Fort Collins, CO.',
+    imageSrc: 'https://gennetten.org/PortfolioImages/Drawings/Audra.jpg',
+    category: 'drawings'
+  },
+  {
+    id: 'drawing-0',
     title: 'Hunter',
     media: 'Pencil on paper, 18 x 24 inches, 2025',
     description: 'A live model study at Umbra Academy of Realist Art, focusing on anatomy and form.',
