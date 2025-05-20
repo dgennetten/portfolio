@@ -99,7 +99,7 @@ export const artworks: Artwork[] = [
   { id: 'WIPkinetics-1', title: 'Kinetic Rain II', media: 'Motorized kinetic sculpture.', description: 'Eventually, this will be a motorized kinetic sculpture that is a drastically scaled-down version of the Kinetic Rain sculpture at Changi Airport, Singapore. <a href="https://www.youtube.com/watch?v=NXuQnDeIyY8" target="_blank" rel="noopener noreferrer" style="color: #1d4ed8; text-decoration: underline;">Learn more</a>', imageSrc: 'images/Kinetics/KineticRainII.mp4', category: 'WIPkinetics' },
 
   // WIP Prints
-  { id: 'WIPprints-1', title: 'Tools of the Trade', media: 'Mezzotints, invented in 1642, are capable of producing a wide range of tones.', description: 'This is a work in progress, a series of prints that will be made using the mezzotint process.', imageSrc: 'images/Prints/ToolsOfTheTrade.jpg', category: 'WIPprints' }
+  { id: 'WIPprints-1', title: 'Tools of the Trade', media: 'Mezzotints, invented in 1642, are capable of producing a wide range of tones.', description: 'This is a work in progress, a series of prints that will be made using the mezzotint process.', imageSrc: '/images/Prints/ToolsOfTheTrade.jpg', category: 'WIPprints' }
 ];
 
 export const featuredArtworks: Artwork[] = [
