@@ -59,6 +59,18 @@ const MobileNavigation: React.FC = () => {
           </li>
           <li className="flex-1">
             <NavLink 
+              to="/gallery/projects"
+              className={({ isActive }) => `
+                flex flex-col items-center py-3 
+                ${isActive ? 'text-black' : 'text-gray-500'}
+              `}
+            >
+              <DraftingCompass size={20} />
+              <span className="text-xs mt-1">Design</span>
+            </NavLink>
+          </li>
+          <li className="flex-1">
+            <NavLink 
               to="/bio"
               className={({ isActive }) => `
                 flex flex-col items-center py-3 

@@ -7,6 +7,8 @@ export const artworks: Artwork[] = [
   // Photography
   { id: 'photo-1', title: 'Untitled', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Photography/Tokyo10231999.jpg', category: 'photography' },
 
+  // Design Projects 
+  { id: 'project-1', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'projects' },
 ];
 
 export const featuredArtworks: Artwork[] = [

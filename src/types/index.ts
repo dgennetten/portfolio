@@ -4,7 +4,7 @@ export interface Artwork {
   media: string;
   description: string;
   imageSrc: string;
-  category: 'logos' | 'photography';
+  category: 'logos' | 'photography' | 'projects';
 }
 
-export type Category = 'logos' | 'photography';
+export type Category = 'logos' | 'photography' | 'projects';

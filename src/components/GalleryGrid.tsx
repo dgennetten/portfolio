@@ -7,6 +7,7 @@ import ImageModal from './ImageModal';
 const categoryNames: Record<Category, string> = {
   logos: 'Logos',
   photography: 'Photographs',
+  projects: 'Design Projects',
 };
 
 const GalleryGrid: React.FC = () => {
