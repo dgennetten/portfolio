@@ -42,7 +42,7 @@ const MobileNavigation: React.FC = () => {
               `}
             >
               <Pencil size={20} />
-              <span className="text-xs mt-1">Logo</span>
+              <span className="text-xs mt-1">Logos</span>
             </NavLink>
           </li>
          <li className="flex-1">
@@ -54,7 +54,7 @@ const MobileNavigation: React.FC = () => {
               `}
             >
               <Aperture size={20} />
-              <span className="text-xs mt-1">Click</span>
+              <span className="text-xs mt-1">Photos</span>
             </NavLink>
           </li>
           <li className="flex-1">
@@ -66,7 +66,7 @@ const MobileNavigation: React.FC = () => {
               `}
             >
               <DraftingCompass size={20} />
-              <span className="text-xs mt-1">Design</span>
+              <span className="text-xs mt-1">Projects</span>
             </NavLink>
           </li>
           <li className="flex-1">
@@ -78,7 +78,7 @@ const MobileNavigation: React.FC = () => {
               `}
             >
               <User size={20} />
-              <span className="text-xs mt-1">Me</span>
+              <span className="text-xs mt-1">About</span>
             </NavLink>
           </li>
         </ul>
