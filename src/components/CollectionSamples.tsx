@@ -43,77 +43,18 @@ const CollectionSamples: React.FC = () => {
         </div>
         <div className="flex flex-wrap gap-4 items-center justify-center mt-12 mb-12 py-0">
           <Link
-            to="/gallery/drawings"
+            to="/gallery/logos"
             className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
           >
-            Drawings
+            Logos
           </Link>
-          <Link
-            to="/gallery/paintings"
-            className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
-          >
-            Paintings
-          </Link>
-          <Link
-            to="/gallery/sculptures"
-            className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
-          >
-            Sculptures
-          </Link>
-          <Link
-            to="/gallery/geometric"
-            className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
-          >
-            Geometrics
-          </Link>
-          <Link
-            to="/gallery/design"
-            className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
-          >
-            Designs
-          </Link>
-          <Link
+         <Link
             to="/gallery/photography"
             className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
           >
             Photographs
           </Link>
         </div>
-      </div>
-      <div className="container mx-auto px-4">
-        {/* Centered Lucide Component icon */}
-        <div className="flex justify-center items-center my-12">
-          <Component className="text-red-600 w-16 h-16" /> {/* Red and large icon */}
-        </div>
-        <div className="flex space-x-4 items-center justify-center mt-12 py-0">
-          <h4 className="text-3xl md:text-4xl font-light text-center mb-0">Works In Progress</h4>
-        </div>
-        <div className="flex flex-wrap gap-4 items-center justify-center mt-12 mb-12 py-0">
-          <Link
-            to="/gallery/WIPdrawings"
-            className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
-          >
-            WIP Drawings
-          </Link>
-          <Link
-            to="/gallery/WIPsculptures"
-            className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
-          >
-            WIP Sculptures
-          </Link>
-          <Link
-            to="/gallery/WIPkinetics"
-            className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
-          >
-            WIP Kinetic Sculptures
-          </Link>
-          <Link
-            to="/gallery/WIPprints"
-            className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
-          >
-            WIP Prints 
-          </Link>
-       </div>
       </div>
     </div>
   );

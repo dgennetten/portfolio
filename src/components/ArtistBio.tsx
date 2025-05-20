@@ -11,14 +11,14 @@ const ArtistBio: React.FC = () => {
           <div className="md:w-1/3">
             <div className="aspect-square overflow-hidden">
               <img 
-                src="http://gennetten.org/PortfolioImages/mug.jpg" 
-                alt="K. Douglas Gennetten" 
+                src="/images/Mug.jpg" 
+                alt="Darren Gennetten" 
                 className="w-full h-full object-cover"
               />
             </div>
             <div className="flex justify-center gap-4 mt-4">
               <a 
-                href="https://www.instagram.com/dgennetten" 
+                href="https://www.instagram.com/dqgennetten" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="text-gray-500 hover:text-black transition-colors"
@@ -26,7 +26,7 @@ const ArtistBio: React.FC = () => {
                 <Instagram size={24} />
               </a>
               <a 
-                href="mailto:douglas@gennetten.com" 
+                href="mailto:darren@gennetten.com" 
                 className="text-gray-500 hover:text-black transition-colors"
               >
                 <Mail size={24} />
@@ -36,24 +36,15 @@ const ArtistBio: React.FC = () => {
 
           <div className="md:w-2/3">
             <p className="text-lg mb-6 leading-relaxed">
-              After a long career in engineering, retirement has given me the freedom to pursue my 
-              love for art, self-discovery, and learning.
-              I've come to appreciate that art is not just a personal journey but a shared 
-              experience that connects us in unexpected ways.
+              Bio stuff..
             </p>
 
             <p className="text-lg mb-6 leading-relaxed">
-              Starting with figurative abstraction in Colorado marble, I now focus on classical 
-              realism, honing my skills through academy-style atelier training. My lifelong 
-              fascination with science and mathematics—especially geometry—fuels my appreciation 
-              for Islamic art, where intricate patterns and symmetry offer endless inspiration.
+              More bio stuff..
             </p>
 
             <p className="text-lg mb-6 leading-relaxed">
-              Years ago, I created a website called Foolscap as a place to share my thoughts. 
-              Few people visited, but it became an outlet for reflection. The name has stayed 
-              with me, and this page feels like a natural extension of that early project—a space 
-              to explore art, science, and mathematics with an open mind.
+              Even more bio stuff.. 
             </p>
           </div>
         </div>

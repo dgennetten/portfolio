@@ -5,16 +5,8 @@ import { getCategoryArtworks } from '../data/artworks';
 import ImageModal from './ImageModal';
 
 const categoryNames: Record<Category, string> = {
-  drawings: 'Drawings',
-  paintings: 'Paintings',
-  sculptures: 'Sculptures',
-  geometric: 'Geometrics',
-  design: 'Designs',
+  logos: 'Logos',
   photography: 'Photographs',
-  WIPdrawings: 'Works In Progress - Drawings',
-  WIPsculptures: 'Works In Progress - Sculptures',
-  WIPkinetics: 'Works In Progress - Kinetic Sculptures',
-  WIPprints: 'Works In Progress - Prints',
 };
 
 const GalleryGrid: React.FC = () => {

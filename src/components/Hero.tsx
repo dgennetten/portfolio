@@ -6,16 +6,16 @@ const Hero: React.FC = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat z-0"
         style={{ 
-          backgroundImage: "url('https://gennetten.org/PortfolioImages/Paintings/Car25.jpg')",
+          backgroundImage: "url('/images/Hero.jpg')",
           filter: "brightness(0.7)"
         }}
       />
       <div className="relative z-10 text-white text-center px-4">
         <h1 className="text-5xl md:text-7xl font-light tracking-wider mb-4">
-          K. Douglas Gennetten
+          Darren Gennetten
         </h1>
         <p className="text-xl md:text-2xl font-light tracking-wide">
-          Student · Engineer · Artist
+          Designer · Artist
         </p>
       </div>
     </div>

@@ -22,7 +22,7 @@ const Navigation: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           <div className="text-xl font-light tracking-wide">
             <NavLink to="/" className="hover:opacity-70 transition-opacity duration-200">
-              Douglas Gennetten
+              Darren Gennetten
             </NavLink>
           </div>
           
@@ -42,65 +42,17 @@ const Navigation: React.FC = () => {
               </li> */}
               <li>
                 <NavLink 
-                  to="/gallery/drawings"
+                  to="/gallery/logos"
                   className={({ isActive }) => 
                     isActive 
                       ? 'text-black border-b border-black pb-1' 
                       : 'text-gray-600 hover:text-black transition-colors duration-200'
                   }
                 >
-                  Drawings
+                  Logos
                 </NavLink>
               </li>
-              <li>
-                <NavLink 
-                  to="/gallery/paintings"
-                  className={({ isActive }) => 
-                    isActive 
-                      ? 'text-black border-b border-black pb-1' 
-                      : 'text-gray-600 hover:text-black transition-colors duration-200'
-                  }
-                >
-                  Paintings
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/gallery/sculptures"
-                  className={({ isActive }) => 
-                    isActive 
-                      ? 'text-black border-b border-black pb-1' 
-                      : 'text-gray-600 hover:text-black transition-colors duration-200'
-                  }
-                >
-                  Sculptures
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/gallery/geometric"
-                  className={({ isActive }) => 
-                    isActive 
-                      ? 'text-black border-b border-black pb-1' 
-                      : 'text-gray-600 hover:text-black transition-colors duration-200'
-                  }
-                >
-                  Geometrics
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/gallery/design"
-                  className={({ isActive }) => 
-                    isActive 
-                      ? 'text-black border-b border-black pb-1' 
-                      : 'text-gray-600 hover:text-black transition-colors duration-200'
-                  }
-                >
-                  Designs
-                </NavLink>
-              </li>
-              <li>
+             <li>
                 <NavLink 
                   to="/gallery/photography"
                   className={({ isActive }) => 

@@ -11,7 +11,7 @@ const MobileNavigation: React.FC = () => {
           <div className="flex justify-center items-center h-16">
             <div className="text-xl font-light tracking-wide">
               <NavLink to="/" className="hover:opacity-70 transition-opacity duration-200">
-                K. Douglas Gennetten
+                Darren Gennetten
               </NavLink>
             </div>
           </div>
@@ -35,65 +35,17 @@ const MobileNavigation: React.FC = () => {
           </li>
           <li className="flex-1">
             <NavLink 
-              to="/gallery/drawings"
+              to="/gallery/logos"
               className={({ isActive }) => `
                 flex flex-col items-center py-3 
                 ${isActive ? 'text-black' : 'text-gray-500'}
               `}
             >
               <Pencil size={20} />
-              <span className="text-xs mt-1">Draw</span>
+              <span className="text-xs mt-1">Logo</span>
             </NavLink>
           </li>
-          <li className="flex-1">
-            <NavLink 
-              to="/gallery/paintings"
-              className={({ isActive }) => `
-                flex flex-col items-center py-3 
-                ${isActive ? 'text-black' : 'text-gray-500'}
-              `}
-            >
-              <Brush size={20} />
-              <span className="text-xs mt-1">Paint</span>
-            </NavLink>
-          </li>
-          <li className="flex-1">
-            <NavLink 
-              to="/gallery/sculptures"
-              className={({ isActive }) => `
-                flex flex-col items-center py-3 
-                ${isActive ? 'text-black' : 'text-gray-500'}
-              `}
-            >
-              <Box size={20} />
-              <span className="text-xs mt-1">Sculpt</span>
-            </NavLink>
-          </li>
-          <li className="flex-1">
-            <NavLink 
-              to="/gallery/geometric"
-              className={({ isActive }) => `
-                flex flex-col items-center py-3 
-                ${isActive ? 'text-black' : 'text-gray-500'}
-              `}
-            >
-              <DraftingCompass size={20} />
-              <span className="text-xs mt-1">Tile</span>
-            </NavLink>
-          </li>
-          <li className="flex-1">
-            <NavLink 
-              to="/gallery/design"
-              className={({ isActive }) => `
-                flex flex-col items-center py-3 
-                ${isActive ? 'text-black' : 'text-gray-500'}
-              `}
-            >
-              <PenTool size={20} />
-              <span className="text-xs mt-1">Design</span>
-            </NavLink>
-          </li>
-          <li className="flex-1">
+         <li className="flex-1">
             <NavLink 
               to="/gallery/photography"
               className={({ isActive }) => `
