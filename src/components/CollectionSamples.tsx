@@ -54,6 +54,12 @@ const CollectionSamples: React.FC = () => {
           >
             Photographs
           </Link>
+          <Link
+            to="/gallery/projects"
+            className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
+          >
+            Design Projects
+          </Link>
         </div>
       </div>
     </div>
