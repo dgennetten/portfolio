@@ -22,3 +22,9 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+components/CollectionsSamples.tsx
+components/ArtistBio.tsx
+components/Hero.tsx
+components/MobileNavigation.tsx
+components/Navigation.tsx
+data/artworks.ts
