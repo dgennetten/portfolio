@@ -13,17 +13,17 @@ export const artworks: Artwork[] = [
   { id: 'project-c', title: 'Project C', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'projects' },
 
   // Design Project DETAILS
-  { id: 'details-a-1', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'details-a' },
-  { id: 'details-a-2', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'details-a' },
-  { id: 'details-a-3', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'details-a' },
+  { id: 'detailsA-1', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'detailsA' },
+  { id: 'detailsA-2', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'detailsA' },
+  { id: 'detailsA-3', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'detailsA' },
   
-  { id: 'details-b-1', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'details-b' },
-  { id: 'details-b-2', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'details-b' },
-  { id: 'details-b-3', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'details-b' },
+  { id: 'detailsB-1', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'detailsB' },
+  { id: 'detailsB-2', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'detailsB' },
+  { id: 'detailsB-3', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'detailsB' },
 
-  { id: 'details-c-1', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'details-c' },
-  { id: 'details-c-2', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'details-c' },
-  { id: 'details-c-3', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'details-c' },
+  { id: 'detailsC-1', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'detailsC' },
+  { id: 'detailsC-2', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'detailsC' },
+  { id: 'detailsC-3', title: 'Saxy', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Projects/Saxy.jpg', category: 'detailsC' },
 ];
 
 export const featuredArtworks: Artwork[] = [

@@ -8,6 +8,10 @@ const categoryNames: Record<Category, string> = {
   logos: 'Logos',
   photography: 'Photographs',
   projects: 'Design Projects',
+  detailsA: 'Design Project Details A',
+  detailsB: 'Design Project Details B',
+  detailsC: 'Design Project Details C',
+  // Add more categories as needed
 };
 
 const GalleryGrid: React.FC = () => {
