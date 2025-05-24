@@ -12,7 +12,7 @@ const Hero: React.FC = () => {
       />
       <div className="relative z-10 text-white text-center px-4">
         <h1 className="text-5xl md:text-7xl font-light tracking-wider mb-4">
-          K. Douglas Gennetten
+          Douglas Gennetten
         </h1>
         <p className="text-xl md:text-2xl font-light tracking-wide">
           Student · Engineer · Artist
