@@ -11,7 +11,7 @@ const ArtistBio: React.FC = () => {
           <div className="md:w-1/3">
             <div className="aspect-square overflow-hidden">
               <img 
-                src="/images/mug.jpg" 
+                src="http://gennetten.org/trackedImages/mug.jpg" 
                 alt="K. Douglas Gennetten" 
                 className="w-full h-full object-cover"
               />
