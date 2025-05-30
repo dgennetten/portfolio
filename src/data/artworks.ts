@@ -65,11 +65,12 @@ export const artworks: Artwork[] = [
   { id: 'geometric-1', title: 'Tesselations of the Square II, Tesselation I [1984!]', media: 'Ink and Pencil on Paper, 25 x 11cm, 1984', description: 'Generated in 1984 (before PCs) using a plotter and a program I wrote in BASIC on an HP 9845 workstation. The plotter was an HP 9872.', imageSrc: '/images/Geometric/Tesselation1984b.jpg', category: 'geometric' },
 
   // Design
-  { id: 'design-10', title: 'Fort Collins Trolley New Logo', media: 'Vector Graphics, Illustrator, 2022', description: 'New, modern, logo for the Fort Collins Municipal Railway.', imageSrc: '/images/Designs/TrolleyNewLogo.jpg', category: 'design' },
-  { id: 'design-9', title: 'Fort Collins Trolley New Logo - dark', media: 'Vector Graphics, Illustrator, 2022', description: 'New, modern, logo for the Fort Collins Municipal Railway.', imageSrc: '/images/Designs/TrolleyDarkLogo.jpg', category: 'design' },
-  { id: 'design-8', title: 'Fort Collins Trolley - Alternate Branding', media: 'Vector Graphics, Illustrator, 2022', description: 'Several alternate branding graphics for the Fort Collins Municipal Railway.', imageSrc: '/images/Designs/TrolleyAltBrand.jpg', category: 'design' },
-  { id: 'design-7', title: 'Various Trolley Coasters', media: 'Wood, Leather, Rubber. 2022', description: 'Having fun on the laser down at the maker space!', imageSrc: '/images/Designs/TrolleyCoasters.jpg', category: 'design' },
-  { id: 'design-6', title: 'Computer Generated Sundial', media: 'Vector graphics, Ink on Paper. 25 x 60cm, 1985-2024', description: 'Accurate to 30 seconds, algorithmically generated, xy plotter.', imageSrc: '/images/Designs/SundialOnDeck.jpg', category: 'design' },
+  { id: 'design-11', title: 'Fort Collins Trolley New Logo', media: 'Vector Graphics, Illustrator, 2022', description: 'New, modern, logo for the Fort Collins Municipal Railway.', imageSrc: '/images/Designs/TrolleyNewLogo.jpg', category: 'design' },
+  { id: 'design-10', title: 'Fort Collins Trolley New Logo - dark', media: 'Vector Graphics, Illustrator, 2022', description: 'New, modern, logo for the Fort Collins Municipal Railway.', imageSrc: '/images/Designs/TrolleyDarkLogo.jpg', category: 'design' },
+  { id: 'design-9', title: 'Fort Collins Trolley - Alternate Branding', media: 'Vector Graphics, Illustrator, 2022', description: 'Several alternate branding graphics for the Fort Collins Municipal Railway.', imageSrc: '/images/Designs/TrolleyAltBrand.jpg', category: 'design' },
+  { id: 'design-8', title: 'Various Trolley Coasters', media: 'Wood, Leather, Rubber. 2022', description: 'Having fun on the laser down at the maker space!', imageSrc: '/images/Designs/TrolleyCoasters.jpg', category: 'design' },
+  { id: 'design-7', title: 'Computer9Generated Sundial', media: 'Vector graphics, Ink on Paper. 25 x 60cm, 1985-2024', description: 'Accurate to 30 seconds, algorithmically generated, xy plotter.', imageSrc: '/images/Designs/SundialOnDeck.jpg', category: 'design' },
+  { id: 'design-6', title: 'Computer Generated Sundial', media: 'Vector graphics, Cast Bronze. 25 x 60cm, 1985-2024', description: 'Accurate to 30 seconds, algorithmically generated, xy plotter.', imageSrc: '/images/Designs/SundialInBronze.jpg', category: 'design' },
   { id: 'design-5', title: 'New Logo/Coaster for Thursday Pints group', media: 'Vector Graphics, Illustrator, 2024', description: 'A play on the hp logo (dont tell), this logo is for a group of old hp friends who meet every Thursday for Pints.', imageSrc: '/images/Designs/ThursdayPints1.jpg', category: 'design' },
   { id: 'design-4', title: 'Laser-engraved Coaster for Thursday Pints group', media: 'Vector Graphics, Illustrator, 2024', description: 'Made dozens of these with leather scraps for the group', imageSrc: '/images/Designs/ThursdayPints2.jpg', category: 'design' },
   { id: 'design-3', title: 'Laser-engraved Coasters', media: 'Vector Graphics, Illustrator, 2024', description: 'A sampling of coasters in use.', imageSrc: '/images/Designs/ThursdayPints3.jpg', category: 'design' },
@@ -85,7 +86,6 @@ export const artworks: Artwork[] = [
 
   // WIP Drawings
   { id: 'WIPdrawing-2', title: 'Belvedere', media: 'Charcoal on paper, 18 x 24 inches', description: 'In progress, charcoal drawing of the Belvedere Torlonia, a classical sculpture. (this is harder than it looks!)', imageSrc: '/images/Drawings/Belvedere.jpg', category: 'WIPdrawings' },
-  { id: 'WIPdrawing-1', title: 'Hunter', media: 'Pencil on paper, 18 x 24 inches', description: 'In progress, drawing of live model, Hunter. Umbra Academy of Realist Art, Loveland, CO.', imageSrc: '/images/Drawings/Hunter.jpg', category: 'WIPdrawings' },
 
   // WIP Sculptures
   { id: 'WIPsculpture-4', title: 'David\\s Nose', media: 'Clay, 11 x 20cm', description: 'In progress, clay sculpture of the nose of Michelangelo\'s David. Working toward excellence at the Melanie Furtado Sculpture Atelier, Paris, France.', imageSrc: '/images/Sculptures/DavidsNose1.jpg', category: 'WIPsculptures' },
@@ -100,7 +100,9 @@ export const artworks: Artwork[] = [
   { id: 'WIPkinetics-1', title: 'Kinetic Rain II', media: 'Motorized kinetic sculpture.', description: 'Eventually, this will be a motorized kinetic sculpture that is a drastically scaled-down version of the Kinetic Rain sculpture at Changi Airport, Singapore. <a href="https://www.youtube.com/watch?v=NXuQnDeIyY8" target="_blank" rel="noopener noreferrer" style="color: #1d4ed8; text-decoration: underline;">Learn more</a>', imageSrc: 'http://gennetten.com/images/Kinetics/KineticRainII.mp4', category: 'WIPkinetics' },
 
   // WIP Prints
-  { id: 'WIPprints-1', title: 'Tools of the Trade', media: 'Mezzotints, invented in 1642, are capable of producing a wide range of tones.', description: 'This is a work in progress, a series of prints that will be made using the mezzotint process.', imageSrc: '/images/Prints/ToolsOfTheTrade.jpg', category: 'WIPprints' }
+  { id: 'WIPprints-1', title: 'Tools of the Trade', media: 'Mezzotints, invented in 1642, are capable of producing a wide range of tones.', description: 'This is a work in progress, a series of prints that will be made using the mezzotint process.', imageSrc: '/images/Prints/ToolsOfTheTrade.jpg', category: 'WIPprints' },
+  { id: 'WIPprints-2', title: 'Rocking the Plate', media: 'Copper Plate', description: 'My First Attempt at Rocking a Plate!', imageSrc: '/images/Prints/RockingCopperPlate.mp4', category: 'WIPprints' },
+  { id: 'WIPprints-3', title: 'Almost Finished?', media: 'Copper Plate', description: 'After many passes. Not sure if this is enough, so a bit more?', imageSrc: '/images/Prints/FinishedRockedPlate.jpg', category: 'WIPprints' }
 ];
 
 export const featuredArtworks: Artwork[] = [
