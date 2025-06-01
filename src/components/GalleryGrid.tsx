@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import { Artwork, Category } from '../types';
 import { getCategoryArtworks } from '../data/artworks';
 import ImageModal from './ImageModal';
@@ -22,6 +22,7 @@ const GalleryGrid: React.FC = () => {
   const [artworks, setArtworks] = useState<Artwork[]>([]);
   const [selectedArtwork, setSelectedArtwork] = useState<Artwork | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (category) {
@@ -48,7 +49,16 @@ const GalleryGrid: React.FC = () => {
 
   return (
     <div className="container mx-auto px-4 py-16">
-      <h2 className="text-3xl md:text-4xl font-light text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-light text-center mb-12 flex items-center justify-center gap-4">
+        {category && category.includes('WIP') && (
+          <button
+            onClick={() => navigate(-1)}
+            className="px-2 py-1 bg-gray-200 hover:bg-gray-300 rounded mr-4 text-base"
+            style={{ minWidth: 45, fontWeight: 500, fontSize: '0.95rem' }} // 0.875rem = 14px
+          >
+            {'< BACK'}
+          </button>
+        )}
         {category && categoryNames[category]}
       </h2>
       
