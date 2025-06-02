@@ -101,8 +101,8 @@ export const artworks: Artwork[] = [
 
   // WIP Prints
   { id: 'WIPprints-1', title: 'Tools of the Trade', media: 'Mezzotints, invented in 1642, are capable of producing a wide range of tones.', description: 'This is a work in progress, a series of prints that will be made using the mezzotint process.', imageSrc: '/images/Prints/ToolsOfTheTrade.jpg', category: 'WIPprints' },
-  { id: 'WIPprints-2', title: 'Rocking the Plate', media: 'Copper Plate', description: 'My First Attempt at Rocking a Plate!', imageSrc: '/images/Prints/RockingCopperPlate.mp4', category: 'WIPprints' },
-  { id: 'WIPprints-3', title: 'Almost Finished?', media: 'Copper Plate', description: 'After many passes. Not sure if this is enough, so a bit more?', imageSrc: '/images/Prints/FinishedRockedPlate.jpg', category: 'WIPprints' }
+  { id: 'WIPprints-2', title: 'Rocking the Plate', media: 'Copper Plate', description: 'My First Attempt at rocking a plate for mezzotint print making.', imageSrc: '/images/Prints/RockingCopperPlate.mp4', category: 'WIPprints' },
+  { id: 'WIPprints-3', title: 'Almost Finished?', media: 'Copper Plate', description: 'After many passes. Not sure if this is enough, so a bit more? Now, to figure out what image to burnish into the copper...', imageSrc: '/images/Prints/FinishedRockedPlate.jpg', category: 'WIPprints' }
 ];
 
 export const featuredArtworks: Artwork[] = [
