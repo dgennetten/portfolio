@@ -8,6 +8,7 @@ const categoryNames: Record<Category, string> = {
   drawings: 'Drawings',
   paintings: 'Paintings',
   sculptures: 'Sculptures',
+  prints: 'Prints',
   geometric: 'Geometrics',
   design: 'Designs',
   photography: 'Photographs',
