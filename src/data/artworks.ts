@@ -46,7 +46,8 @@ export const artworks: Artwork[] = [
   { id: 'sculpture-1', title: 'Aureola - early rough', media: 'Colorado Yule Marble, 95cm, 2006', description: 'Abstract figurative with maquette.', imageSrc: '/images/Sculptures/Aureola4.jpg', category: 'sculptures' },
 
   // Prints
-  { id: 'prints-1', title: 'Car 25 in TetraPak', media: 'tetrapak print', description: 'My first experimentation with TetraPak printing with @MadHarePress', imageSrc: '/images/Prints/TetraPakCar25a.jpg', category: 'prints' },
+  { id: 'prints-2', title: 'Car 25 in TetraPak', media: 'tetrapak print', description: 'My first experimentation with TetraPak printing with <a href="https://www.instagram.com/madharepress" target="_blank" rel="noopener noreferrer" style="color: #1d4ed8; text-decoration: underline;">@MadHarePress</a>', imageSrc: '/images/Prints/TetraPakCar25a.jpg', category: 'prints' },
+  { id: 'prints-1', title: 'Car 25 in TetraPak', media: 'tetrapak print', description: 'My first experimentation with TetraPak printing with <a href="https://www.instagram.com/madharepress" target="_blank" rel="noopener noreferrer" style="color: #1d4ed8; text-decoration: underline;">@MadHarePress</a>', imageSrc: '/images/Prints/TetraPakCar25b.jpg', category: 'prints' },
 
   // Geometric
   { id: 'geometric-17', title: 'Alcazar Triptych #1', media: 'Layered, cut paper, 8 x 8 inches, 2025', description: 'Compass-and-ruler constructed geometric tesselation inspired by the Alcazar of Seville.', imageSrc: '/images/Geometric/AlcazarTriptych1.jpg', category: 'geometric' },
