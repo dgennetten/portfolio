@@ -126,7 +126,7 @@ const MobileNavigation: React.FC = () => {
               `}
             >
               <User size={20} />
-              <span className="text-xs mt-1">Me</span>
+              <span className="text-xs mt-1">Bio</span>
             </NavLink>
           </li>
         </ul>
