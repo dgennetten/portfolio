@@ -36,7 +36,7 @@ const ArtistBio: React.FC = () => {
 
           <div className="md:w-2/3">
             <p className="text-lg mb-6 leading-relaxed">
-              Bio stuff..
+              I am an artist/designer... 
             </p>
 
             <p className="text-lg mb-6 leading-relaxed">
