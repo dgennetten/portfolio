@@ -6,7 +6,7 @@ export const artworks: Artwork[] = [
 
   // Photography
   { id: 'photo-1', title: 'Rainbo Club', media: 'nikon', description: 'Foggy night outside of the Rainbo Club', imageSrc: '/images/Photography/photography1.jpg', category: 'photography' },
-  { id: 'photo-2', title: 'Untitled', media: 'nikon', description: 'Some description..', imageSrc: '/images/Photography/photography2.jpg', category: 'photography' },
+  { id: 'photo-2', title: 'hello', media: 'nikon', description: 'Some description..', imageSrc: '/images/Photography/photography2.jpg', category: 'photography' },
   { id: 'photo-3', title: 'Untitled', media: 'nikon', description: 'Some description..', imageSrc: '/images/Photography/photography3.jpg', category: 'photography' },
   { id: 'photo-4', title: 'Untitled', media: 'nikon', description: 'Some description..', imageSrc: '/images/Photography/photography4.jpg', category: 'photography' },
   { id: 'photo-5', title: 'Untitled', media: 'nikon', description: 'Some description..', imageSrc: '/images/Photography/photography5.jpg', category: 'photography' },
