@@ -1,17 +1,23 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Artwork, Category } from '../types';
-import { getCategoryArtworks } from '../data/artworks';
+import { getCategoryArtworks, artworks as allArtworks } from '../data/artworks';
 import ImageModal from './ImageModal';
 
 const categoryNames: Record<Category, string> = {
-  logos: 'Logos',
-  photography: 'Photographs',
+  logos: 'Logos (TBD)',
+  photography: 'Photographs (TBD)',
+  projects: 'Design Projects (TBD)',
+  detailsA: 'Design Project Details A',
+  detailsB: 'Design Project Details B',
+  detailsC: 'Design Project Details C',
+  // Add more categories as needed
 };
 
 const GalleryGrid: React.FC = () => {
   const { category } = useParams<{ category: Category }>();
   const [artworks, setArtworks] = useState<Artwork[]>([]);
+  const [modalArtworks, setModalArtworks] = useState<Artwork[]>(artworks);
   const [selectedArtwork, setSelectedArtwork] = useState<Artwork | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -31,11 +37,28 @@ const GalleryGrid: React.FC = () => {
   const closeModal = () => {
     setIsModalOpen(false);
     setSelectedArtwork(null);
+    setModalArtworks(artworks); // Reset to current gallery
     document.body.style.overflow = 'auto';
   };
 
   const handleNavigate = (artwork: Artwork) => {
     setSelectedArtwork(artwork);
+  };
+
+  const handleProjectClick = (project: Artwork) => {
+    // Only for projects category
+    if (project.category === 'projects') {
+      // Find the details category name, e.g., "detailsA" for "projectA"
+      const detailsCategory = 'details' + project.id.slice(-1).toUpperCase();
+      // Use allArtworks here!
+      const detailsItems = allArtworks.filter(a => a.category === detailsCategory);
+      if (detailsItems.length > 0) {
+        setModalArtworks(detailsItems);
+        setSelectedArtwork(detailsItems[0]);
+        setIsModalOpen(true);
+        document.body.style.overflow = 'hidden';
+      }
+    }
   };
 
   return (
@@ -46,10 +69,14 @@ const GalleryGrid: React.FC = () => {
       
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {artworks.map((artwork) => (
-          <div 
-            key={artwork.id} 
+          <div
+            key={artwork.id}
             className="group cursor-pointer transition-all duration-300"
-            onClick={() => openModal(artwork)}
+            onClick={() =>
+              category === 'projects'
+                ? handleProjectClick(artwork)
+                : openModal(artwork)
+            }
           >
             <div className="relative aspect-square overflow-hidden mb-4 rounded-lg">
               {artwork.imageSrc.endsWith('.mp4') ? (
@@ -79,9 +106,9 @@ const GalleryGrid: React.FC = () => {
       </div>
 
       {isModalOpen && selectedArtwork && (
-        <ImageModal 
+        <ImageModal
           artwork={selectedArtwork}
-          artworks={artworks}
+          artworks={modalArtworks}
           isOpen={isModalOpen}
           onClose={closeModal}
           onNavigate={handleNavigate}

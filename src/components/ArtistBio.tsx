@@ -5,7 +5,7 @@ const ArtistBio: React.FC = () => {
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-light text-center mb-12">About</h2>
+        <h2 className="text-3xl md:text-4xl font-light text-center mb-12">About (TBD)</h2>
         
         <div className="flex flex-col md:flex-row gap-8 items-start">
           <div className="md:w-1/3">
