@@ -5,9 +5,9 @@ import { getCategoryArtworks, artworks as allArtworks } from '../data/artworks';
 import ImageModal from './ImageModal';
 
 const categoryNames: Record<Category, string> = {
-  logos: 'Logos (TBD)',
-  photography: 'Photographs (TBD)',
-  projects: 'Design Projects (TBD)',
+  logos: 'Logos',
+  photography: 'Photographs',
+  projects: 'Design Projects',
   detailsA: 'Design Project Details A',
   detailsB: 'Design Project Details B',
   detailsC: 'Design Project Details C',
