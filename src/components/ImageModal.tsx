@@ -92,7 +92,7 @@ const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onCl
           onClick={onClose}
           className="fixed top-4 right-4 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 text-2xl font-bold"
         >
-          &times;
+          ×
         </button>
 
         {artwork.imageSrc.endsWith('.mp4') ? (
@@ -102,13 +102,13 @@ const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onCl
             autoPlay 
             muted
             playsInline
-            className="max-w-full max-h-[70vh] object-contain"
+            className="max-w-full max-h-[70vh] object-contain md:max-w-[80vw] md:max-h-[80vh]"
           />
         ) : (
           <img 
             src={artwork.imageSrc} 
             alt={artwork.title} 
-            className="max-w-full max-h-[70vh] object-contain"
+            className="max-w-full max-h-[70vh] object-contain md:max-w-[80vw] md:max-h-[80vh]"
           />
         )}
 
