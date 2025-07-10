@@ -20,6 +20,7 @@ export const artworks: Artwork[] = [
   { id: 'painting-1', title: 'Untitled', media: 'Oil on panel, 12 x 16 inches, 1973!', description: 'Oil on panel painting of a barn. Project for Art class in highschool.', imageSrc: '/images/Paintings/BarnInOil.jpg', category: 'paintings' },
 
   // Sculptures
+  { id: 'sculpture-25', title: 'MARBLEmarble36!', media: 'Colorado Yule Marble', description: 'In the Raw', imageSrc: '/images/Sculptures/MarbleMarble36-1.jpg', category: 'sculptures' },
   { id: 'sculpture-24', title: 'An Abundance of Caution', media: 'Mixed Media, 15x20cm, 2020', description: 'Mask at MoA 2021 entry. My Covid mask :)', imageSrc: '/images/Sculptures/AnAbundanceOfCaution.jpg', category: 'sculptures' },
   { id: 'sculpture-23', title: 'Untitled', media: 'Hand-Built Fired Clay, 20 x 31cm, 2024', description: 'Abstract figurative, created for the MASKS exhibit at the Fort Collins Museum of Art.', imageSrc: '/images/Sculptures/ClayMask.jpg', category: 'sculptures' },
   { id: 'sculpture-22', title: 'Marble Muse', media: 'Colorado Yule Marble, 32 inches, 2018', description: 'Colorado Yule Marble, 32 inches high on a 10 inch granite base, 2018', imageSrc: '/images/Sculptures/MarbleMuse1.jpg', category: 'sculptures' },

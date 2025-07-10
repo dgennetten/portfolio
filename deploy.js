@@ -15,7 +15,7 @@ async function deployToDreamHost() {
   };
 
   const localDistPath = path.join(__dirname, 'dist');
-  const remoteBasePath = '/gennetten.com';
+  const remoteBasePath = '/douglas.gennetten.com';
   const remoteAssetsPath = `${remoteBasePath}/assets`;
 
   // Verify local dist folder exists
