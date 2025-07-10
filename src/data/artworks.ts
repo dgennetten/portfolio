@@ -23,8 +23,8 @@ export const artworks: Artwork[] = [
 
   // Sculptures
   { id: 'sculpture-29', title: 'Final Day at MARBLEmarble36!', media: 'Colorado Yule Marble', description: 'End of Session! Plenty of Homework for the Winter.', imageSrc: '/images/Sculptures/MarbleMarble36-5.jpg', category: 'sculptures' },
-  { id: 'sculpture-27', title: 'Doing it the Old Fashioned way', media: 'Colorado Yule Marble', description: 'Old Fashioned Measure Twice, Cut Once', imageSrc: '/images/Sculptures/MarbleMarble36-3.jpg', category: 'sculptures' },
-  { id: 'sculpture-26', title: 'Lego David', media: 'Colorado Yule Marble', description: 'First Day of Carving.', imageSrc: '/images/Sculptures/MarbleMarble36-2.jpg', category: 'sculptures' },
+  { id: 'sculpture-27', title: 'Lego David', media: 'Colorado Yule Marble', description: 'First Day of Carving.', imageSrc: '/images/Sculptures/MarbleMarble36-3.jpg', category: 'sculptures' },
+  { id: 'sculpture-26', title: 'Doing it the Old Fashioned way', media: 'Colorado Yule Marble', description: 'Old Fashioned Measure Twice, Cut Once', imageSrc: '/images/Sculptures/MarbleMarble36-2.jpg', category: 'sculptures' },
   { id: 'sculpture-25', title: 'MARBLEmarble36!', media: 'Colorado Yule Marble', description: 'In the Raw', imageSrc: '/images/Sculptures/MarbleMarble36-1.jpg', category: 'sculptures' },
   { id: 'sculpture-24', title: 'An Abundance of Caution', media: 'Mixed Media, 15x20cm, 2020', description: 'Mask at MoA 2021 entry. My Covid mask :)', imageSrc: '/images/Sculptures/AnAbundanceOfCaution.jpg', category: 'sculptures' },
   { id: 'sculpture-23', title: 'Untitled', media: 'Hand-Built Fired Clay, 20 x 31cm, 2024', description: 'Abstract figurative, created for the MASKS exhibit at the Fort Collins Museum of Art.', imageSrc: '/images/Sculptures/ClayMask.jpg', category: 'sculptures' },
