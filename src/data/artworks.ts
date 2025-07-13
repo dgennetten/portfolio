@@ -2,13 +2,15 @@ import { Artwork } from '../types';
 
 export const artworks: Artwork[] = [
   // Drawings
-  { id: 'drawing-6', title: 'Audra', media: 'Pencil on paper, 11 x 14 inches, 2025', description: 'Another evening at 3Square Art Studio, Fort Collins, CO.', imageSrc: '/images/Drawings/Audra.jpg', category: 'drawings' },
-  { id: 'drawing-5', title: 'Hunter', media: 'Pencil on paper, 18 x 24 inches, 2025', description: 'A live model study at Umbra Academy of Realist Art, focusing on anatomy and form.', imageSrc: '/images/Drawings/HunterNude.jpg', category: 'drawings' },
-  { id: 'drawing-4', title: 'Untitled', media: 'Charcoal on paper, 18 x 24 inches, 2025', description: 'Live model at Umbra Academy of Realist Art.', imageSrc: '/images/Drawings/MaleNude.jpg', category: 'drawings' },
-  { id: 'drawing-3', title: 'Isadore', media: 'Charcoal on paper, 28 x 36cm, 2024', description: 'One of my first portraits under the guidance of Elena Cantor, master classical realism artist and teacher.', imageSrc: '/images/Drawings/Isadore.jpg', category: 'drawings' },
-  { id: 'drawing-2', title: 'Torse Antiqve', media: 'Charcoal on paper, 28 x 36cm, 2024', description: 'Intimate torso study of a <a href="https://www.felicecalchi.com/en/6501/" target="_blank" rel="noopener noreferrer" style="color: #1d4ed8; text-decoration: underline;">classic Bargue cast drawing</a>. Studies at Umbra Academy of Realist Art, Loveland, CO.', imageSrc: '/images/Drawings/TorseAntiqve.jpg', category: 'drawings' },
-  { id: 'drawing-1', title: 'Untitled', media: 'Charcoal on paper, 28 x 36cm, 2024', description: 'Quick evening sketch at 3square Art Studio, Fort Collins, CO.', imageSrc: '/images/Drawings/Untitled022024.jpg', category: 'drawings' },
-  { id: 'drawing-0', title: 'Favstine', media: 'Pencil on paper, 28 x 36cm, 2024', description: '<a href="https://www.felicecalchi.com/en/6501/" target="_blank" rel="noopener noreferrer" style="color: #1d4ed8; text-decoration: underline;">Classic Bargue cast drawing</a>. Studies at Umbra Academy of Realist Art, Loveland, CO.', imageSrc: '/images/Drawings/Favstine.jpg', category: 'drawings' },
+  { id: 'drawing-8', title: 'Audra', media: 'Pencil on paper, 11 x 14 inches, 2025', description: 'Another evening at 3Square Art Studio, Fort Collins, CO.', imageSrc: '/images/Drawings/Audra.jpg', category: 'drawings' },
+  { id: 'drawing-7', title: 'Hunter', media: 'Pencil on paper, 18 x 24 inches, 2025', description: 'A live model study at Umbra Academy of Realist Art, focusing on anatomy and form.', imageSrc: '/images/Drawings/HunterNude.jpg', category: 'drawings' },
+  { id: 'drawing-6', title: 'Untitled', media: 'Charcoal on paper, 18 x 24 inches, 2025', description: 'Live model at Umbra Academy of Realist Art.', imageSrc: '/images/Drawings/MaleNude.jpg', category: 'drawings' },
+  { id: 'drawing-5', title: 'Isadore', media: 'Charcoal on paper, 28 x 36cm, 2024', description: 'One of my first portraits under the guidance of Elena Cantor, master classical realism artist and teacher.', imageSrc: '/images/Drawings/Isadore.jpg', category: 'drawings' },
+  { id: 'drawing-4', title: 'Torse Antiqve', media: 'Charcoal on paper, 28 x 36cm, 2024', description: 'Intimate torso study of a <a href="https://www.felicecalchi.com/en/6501/" target="_blank" rel="noopener noreferrer" style="color: #1d4ed8; text-decoration: underline;">classic Bargue cast drawing</a>. Studies at Umbra Academy of Realist Art, Loveland, CO.', imageSrc: '/images/Drawings/TorseAntiqve.jpg', category: 'drawings' },
+  { id: 'drawing-3', title: 'Untitled', media: 'Charcoal on paper, 28 x 36cm, 2024', description: 'Quick evening sketch at 3square Art Studio, Fort Collins, CO.', imageSrc: '/images/Drawings/Untitled022024.jpg', category: 'drawings' },
+  { id: 'drawing-2', title: 'Favstine', media: 'Pencil on paper, 28 x 36cm, 2024', description: '<a href="https://www.felicecalchi.com/en/6501/" target="_blank" rel="noopener noreferrer" style="color: #1d4ed8; text-decoration: underline;">Classic Bargue cast drawing</a>. Studies at Umbra Academy of Realist Art, Loveland, CO.', imageSrc: '/images/Drawings/Favstine.jpg', category: 'drawings' },
+  { id: 'drawing-1', title: 'Blacksmith (1978!)', media: 'ink on paper, 2 x 3.5 inches, 1978', description: 'Tiny pen and ink from my teens', imageSrc: '/images/Drawings/19780808-Blacksmith.jpg', category: 'drawings' },
+  { id: 'drawing-0', title: 'Ghost Town (1976!)', media: 'Pencil on paper, 4 x 6 inches, 1976', description: 'Tiny pencil drawing from my teens', imageSrc: '/images/Drawings/197612-GhostTown.jpg', category: 'drawings' },
 
   // Paintings
   { id: 'painting-7', title: 'Car 25', media: 'Watercolor on canvas, 24 × 36 inches, 2024', description: 'Brush rendering after the Car 25 lineart I created for the Fort Collins Municiple Railway.', imageSrc: '/images/Paintings/Car25.jpg', category: 'paintings' },
@@ -20,6 +22,10 @@ export const artworks: Artwork[] = [
   { id: 'painting-1', title: 'Untitled', media: 'Oil on panel, 12 x 16 inches, 1973!', description: 'Oil on panel painting of a barn. Project for Art class in highschool.', imageSrc: '/images/Paintings/BarnInOil.jpg', category: 'paintings' },
 
   // Sculptures
+  { id: 'sculpture-29', title: 'Final Day at MARBLEmarble36!', media: 'Colorado Yule Marble', description: 'End of Session! Plenty of Homework for the Winter.', imageSrc: '/images/Sculptures/MarbleMarble36-5.jpg', category: 'sculptures' },
+  { id: 'sculpture-27', title: 'Lego David', media: 'Colorado Yule Marble', description: 'First Day of Carving.', imageSrc: '/images/Sculptures/MarbleMarble36-3.jpg', category: 'sculptures' },
+  { id: 'sculpture-26', title: 'Doing it the Old Fashioned way', media: 'Colorado Yule Marble', description: 'Old Fashioned Measure Twice, Cut Once', imageSrc: '/images/Sculptures/MarbleMarble36-2.jpg', category: 'sculptures' },
+  { id: 'sculpture-25', title: 'MARBLEmarble36!', media: 'Colorado Yule Marble', description: 'In the Raw', imageSrc: '/images/Sculptures/MarbleMarble36-1.jpg', category: 'sculptures' },
   { id: 'sculpture-24', title: 'An Abundance of Caution', media: 'Mixed Media, 15x20cm, 2020', description: 'Mask at MoA 2021 entry. My Covid mask :)', imageSrc: '/images/Sculptures/AnAbundanceOfCaution.jpg', category: 'sculptures' },
   { id: 'sculpture-23', title: 'Untitled', media: 'Hand-Built Fired Clay, 20 x 31cm, 2024', description: 'Abstract figurative, created for the MASKS exhibit at the Fort Collins Museum of Art.', imageSrc: '/images/Sculptures/ClayMask.jpg', category: 'sculptures' },
   { id: 'sculpture-22', title: 'Marble Muse', media: 'Colorado Yule Marble, 32 inches, 2018', description: 'Colorado Yule Marble, 32 inches high on a 10 inch granite base, 2018', imageSrc: '/images/Sculptures/MarbleMuse1.jpg', category: 'sculptures' },
@@ -45,6 +51,10 @@ export const artworks: Artwork[] = [
   { id: 'sculpture-2', title: 'Aureola - Centennial Gallery', media: 'Colorado Yule Marble, 95cm, 2006', description: 'Abstract figurative', imageSrc: '/images/Sculptures/Aureola3.jpg', category: 'sculptures' },
   { id: 'sculpture-1', title: 'Aureola - early rough', media: 'Colorado Yule Marble, 95cm, 2006', description: 'Abstract figurative with maquette.', imageSrc: '/images/Sculptures/Aureola4.jpg', category: 'sculptures' },
 
+  // Prints
+  { id: 'prints-2', title: 'Car 25 in TetraPak', media: 'tetrapak print', description: 'My first experimentation with TetraPak printing with <a href="https://www.instagram.com/madharepress" target="_blank" rel="noopener noreferrer" style="color: #1d4ed8; text-decoration: underline;">@MadHarePress</a>', imageSrc: '/images/Prints/TetraPakCar25a.jpg', category: 'prints' },
+  { id: 'prints-1', title: 'Car 25 in TetraPak', media: 'tetrapak print', description: 'My first experimentation with TetraPak printing with <a href="https://www.instagram.com/madharepress" target="_blank" rel="noopener noreferrer" style="color: #1d4ed8; text-decoration: underline;">@MadHarePress</a>', imageSrc: '/images/Prints/TetraPakCar25b.jpg', category: 'prints' },
+
   // Geometric
   { id: 'geometric-17', title: 'Alcazar Triptych #1', media: 'Layered, cut paper, 8 x 8 inches, 2025', description: 'Compass-and-ruler constructed geometric tesselation inspired by the Alcazar of Seville.', imageSrc: '/images/Geometric/AlcazarTriptych1.jpg', category: 'geometric' },
   { id: 'geometric-16', title: 'Alcazar Triptych #2', media: 'Layered, cut paper, 8 x 8 inches, 2025', description: 'Compass-and-ruler constructed geometric tesselation inspired by the Alcazar of Seville.', imageSrc: '/images/Geometric/AlcazarTriptych2.jpg', category: 'geometric' },
@@ -65,9 +75,10 @@ export const artworks: Artwork[] = [
   { id: 'geometric-1', title: 'Tesselations of the Square II, Tesselation I [1984!]', media: 'Ink and Pencil on Paper, 25 x 11cm, 1984', description: 'Generated in 1984 (before PCs) using a plotter and a program I wrote in BASIC on an HP 9845 workstation. The plotter was an HP 9872.', imageSrc: '/images/Geometric/Tesselation1984b.jpg', category: 'geometric' },
 
   // Design
-  { id: 'design-12', title: 'Fort Collins Trolley New Logo', media: 'Vector Graphics, Illustrator, 2022', description: 'New, modern, logo for the Fort Collins Municipal Railway.', imageSrc: '/images/Designs/TrolleyNewLogo.jpg', category: 'design' },
-  { id: 'design-11', title: 'Fort Collins Trolley New Logo - dark', media: 'Vector Graphics, Illustrator, 2022', description: 'New, modern, logo for the Fort Collins Municipal Railway.', imageSrc: '/images/Designs/TrolleyDarkLogo.jpg', category: 'design' },
-  { id: 'design-10', title: 'Fort Collins Trolley - Alternate Branding', media: 'Vector Graphics, Illustrator, 2022', description: 'Several alternate branding graphics for the Fort Collins Municipal Railway.', imageSrc: '/images/Designs/TrolleyAltBrand.jpg', category: 'design' },
+  { id: 'design-13', title: 'Fort Collins Trolley New Logo', media: 'Vector Graphics, Illustrator, 2022', description: 'New, modern, logo for the Fort Collins Municipal Railway.', imageSrc: '/images/Designs/TrolleyNewLogo.jpg', category: 'design' },
+  { id: 'design-12', title: 'Fort Collins Trolley New Logo - dark', media: 'Vector Graphics, Illustrator, 2022', description: 'New, modern, logo for the Fort Collins Municipal Railway.', imageSrc: '/images/Designs/TrolleyDarkLogo.jpg', category: 'design' },
+  { id: 'design-11', title: 'Fort Collins Trolley - Alternate Branding', media: 'Vector Graphics, Illustrator, 2022', description: 'Several alternate branding graphics for the Fort Collins Municipal Railway.', imageSrc: '/images/Designs/TrolleyAltBrand.jpg', category: 'design' },
+  { id: 'design-10', title: 'Fort Collins Trolley - Sticker', media: 'Vector Graphics, Illustrator, 2024', description: 'Variation on Trolley Lineart, 2022', imageSrc: '/images/Designs/TrolleySticker.jpg', category: 'design' },
   { id: 'design-9', title: 'Various Trolley Coasters', media: 'Wood, Leather, Rubber. 2022', description: 'Having fun on the laser down at the maker space!', imageSrc: '/images/Designs/TrolleyCoasters.jpg', category: 'design' },
   { id: 'design-8', title: 'Computer Generated Sundial', media: 'Vector graphics, Ink on Paper. 25 x 60cm, 1985-2024', description: 'Accurate to 30 seconds, algorithmically generated, xy plotter.', imageSrc: '/images/Designs/SundialOnDeck.jpg', category: 'design' },
   { id: 'design-7', title: 'Computer Generated Sundial', media: 'Vector graphics, Cast Bronze. 25 x 60cm, 1985-2024', description: 'Accurate to 30 seconds, algorithmically generated, xy plotter.', imageSrc: '/images/Designs/SundialInBronze.jpg', category: 'design' },
@@ -102,8 +113,8 @@ export const artworks: Artwork[] = [
 
   // WIP Prints
   { id: 'WIPprints-1', title: 'Tools of the Trade', media: 'Mezzotints, invented in 1642, are capable of producing a wide range of tones.', description: 'This is a work in progress, a series of prints that will be made using the mezzotint process.', imageSrc: '/images/Prints/ToolsOfTheTrade.jpg', category: 'WIPprints' },
-  { id: 'WIPprints-2', title: 'Rocking the Plate', media: 'Copper Plate', description: 'My First Attempt at Rocking a Plate!', imageSrc: '/images/Prints/RockingCopperPlate.mp4', category: 'WIPprints' },
-  { id: 'WIPprints-3', title: 'Almost Finished?', media: 'Copper Plate', description: 'After many passes. Not sure if this is enough, so a bit more?', imageSrc: '/images/Prints/FinishedRockedPlate.jpg', category: 'WIPprints' }
+  { id: 'WIPprints-2', title: 'Rocking the Plate', media: 'Copper Plate', description: 'My First Attempt at rocking a plate for mezzotint print making.', imageSrc: '/images/Prints/RockingCopperPlate.mp4', category: 'WIPprints' },
+  { id: 'WIPprints-3', title: 'Almost Finished?', media: 'Copper Plate', description: 'After many passes. Not sure if this is enough, so a bit more? Now, to figure out what image to burnish into the copper...', imageSrc: '/images/Prints/FinishedRockedPlate.jpg', category: 'WIPprints' }
 ];
 
 export const featuredArtworks: Artwork[] = [

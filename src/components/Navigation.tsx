@@ -78,6 +78,18 @@ const Navigation: React.FC = () => {
               </li>
               <li>
                 <NavLink 
+                  to="/gallery/prints"
+                  className={({ isActive }) => 
+                    isActive 
+                      ? 'text-black border-b border-black pb-1' 
+                      : 'text-gray-600 hover:text-black transition-colors duration-200'
+                  }
+                >
+                  Prints
+                </NavLink>
+              </li>
+              <li>
+                <NavLink 
                   to="/gallery/geometric"
                   className={({ isActive }) => 
                     isActive 
