@@ -11,6 +11,7 @@ interface ImageModalProps {
 
 const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onClose, onNavigate }) => {
   const modalRef = useRef<HTMLDivElement>(null);
+  const [isFullScreen, setIsFullScreen] = useState(false);
   const currentIndex = artworks.findIndex(art => art.id === artwork.id);
   const hasPrevious = currentIndex > 0;
   const hasNext = currentIndex < artworks.length - 1;
@@ -29,6 +30,10 @@ const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onCl
     }
   };
 
+  const toggleFullScreen = () => {
+    setIsFullScreen(!isFullScreen);
+  };
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (modalRef.current && !modalRef.current.contains(event.target as Node)) {
@@ -39,7 +44,11 @@ const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onCl
     const handleKeyboard = (event: KeyboardEvent) => {
       switch (event.key) {
         case 'Escape':
-          onClose();
+          if (isFullScreen) {
+            setIsFullScreen(false);
+          } else {
+            onClose();
+          }
           break;
         case 'ArrowLeft':
           if (hasPrevious) handlePrevious();
@@ -57,7 +66,14 @@ const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onCl
       document.removeEventListener('mousedown', handleClickOutside);
       document.removeEventListener('keydown', handleKeyboard);
     };
-  }, [onClose, hasPrevious, hasNext, handlePrevious, handleNext]);
+  }, [onClose, hasPrevious, hasNext, handlePrevious, handleNext, isFullScreen]);
+
+  // Reset full screen state when modal is closed
+  useEffect(() => {
+    if (!isOpen) {
+      setIsFullScreen(false);
+    }
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -65,13 +81,18 @@ const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onCl
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80">
       <div 
         ref={modalRef} 
-        className="relative max-w-[90vw] max-h-[90vh] flex flex-col items-center"
+        className={isFullScreen 
+          ? "relative w-full h-full flex items-center justify-center" 
+          : "relative max-w-[90vw] max-h-[90vh] flex flex-col items-center"
+        }
       >
         {/* Back Button */}
         {hasPrevious && (
           <button
             onClick={handlePrevious}
-            className="fixed top-1/2 left-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 text-2xl font-bold"
+            className={`fixed top-1/2 left-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 text-2xl font-bold ${
+              isFullScreen ? 'opacity-60' : ''
+            }`}
           >
             &lt;
           </button>
@@ -81,16 +102,31 @@ const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onCl
         {hasNext && (
           <button
             onClick={handleNext}
-            className="fixed top-1/2 right-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 text-2xl font-bold"
+            className={`fixed top-1/2 right-4 transform -translate-y-1/2 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 text-2xl font-bold ${
+              isFullScreen ? 'opacity-60' : ''
+            }`}
           >
             &gt;
           </button>
         )}
 
+        {/* Full Screen Toggle Button */}
+        <button
+          onClick={toggleFullScreen}
+          className={`fixed top-4 right-16 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 text-xl font-bold ${
+            isFullScreen ? 'opacity-60' : ''
+          }`}
+          title={isFullScreen ? "Exit full screen" : "Enter full screen"}
+        >
+          {isFullScreen ? "⤡" : "⤢"}
+        </button>
+
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="fixed top-4 right-4 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 text-2xl font-bold"
+          className={`fixed top-4 right-4 text-white bg-black bg-opacity-50 p-2 rounded-full hover:bg-opacity-75 text-2xl font-bold ${
+            isFullScreen ? 'opacity-60' : ''
+          }`}
         >
           &times;
         </button>
@@ -102,24 +138,26 @@ const ImageModal: React.FC<ImageModalProps> = ({ artwork, artworks, isOpen, onCl
             autoPlay 
             muted
             playsInline
-            className="max-w-full max-h-[70vh] object-contain"
+            className={isFullScreen ? "w-screen h-screen object-contain" : "max-w-full max-h-[70vh] object-contain"}
           />
         ) : (
           <img 
             src={artwork.imageSrc} 
             alt={artwork.title} 
-            className="max-w-full max-h-[70vh] object-contain"
+            className={isFullScreen ? "w-screen h-screen object-contain" : "max-w-full max-h-[70vh] object-contain"}
           />
         )}
 
-        {/* Text Below Media */}
-        <div className="text-center mt-4">
-          <h3 className="text-xl font-medium text-white">{artwork.title}</h3>
-          <p className="text-gray-300">{artwork.media}</p>
-          <div className="text-gray-400 mt-1">
-            <p dangerouslySetInnerHTML={{ __html: artwork.description }}></p>
+        {/* Text Below Media - Hidden in full screen mode */}
+        {!isFullScreen && (
+          <div className="text-center mt-4">
+            <h3 className="text-xl font-medium text-white">{artwork.title}</h3>
+            <p className="text-gray-300">{artwork.media}</p>
+            <div className="text-gray-400 mt-1">
+              <p dangerouslySetInnerHTML={{ __html: artwork.description }}></p>
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );
