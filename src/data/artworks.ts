@@ -75,6 +75,7 @@ export const artworks: Artwork[] = [
   { id: 'geometric-1', title: 'Tesselations of the Square II, Tesselation I [1984!]', media: 'Ink and Pencil on Paper, 25 x 11cm, 1984', description: 'Generated in 1984 (before PCs) using a plotter and a program I wrote in BASIC on an HP 9845 workstation. The plotter was an HP 9872.', imageSrc: '/images/Geometric/Tesselation1984b.jpg', category: 'geometric' },
 
   // Design
+  { id: 'design-14', title: 'New Thursday Pints Logo & Coasters', media: 'Leather, Vector Graphics, Illustrator, 2025', description: '2025 Update for Thursday Pints group. Logo for coasters, clothing, ...', imageSrc: '/images/Designs/ThursdayPints2025-1.jpg', category: 'design' },
   { id: 'design-13', title: 'Fort Collins Trolley New Logo', media: 'Vector Graphics, Illustrator, 2022', description: 'New, modern, logo for the Fort Collins Municipal Railway.', imageSrc: '/images/Designs/TrolleyNewLogo.jpg', category: 'design' },
   { id: 'design-12', title: 'Fort Collins Trolley New Logo - dark', media: 'Vector Graphics, Illustrator, 2022', description: 'New, modern, logo for the Fort Collins Municipal Railway.', imageSrc: '/images/Designs/TrolleyDarkLogo.jpg', category: 'design' },
   { id: 'design-11', title: 'Fort Collins Trolley - Alternate Branding', media: 'Vector Graphics, Illustrator, 2022', description: 'Several alternate branding graphics for the Fort Collins Municipal Railway.', imageSrc: '/images/Designs/TrolleyAltBrand.jpg', category: 'design' },
@@ -87,8 +88,6 @@ export const artworks: Artwork[] = [
   { id: 'design-5', title: 'Laser-engraved Coaster for Thursday Pints group', media: 'Vector Graphics, Illustrator, 2024', description: 'Made dozens of these with leather scraps for the group', imageSrc: '/images/Designs/ThursdayPints2.jpg', category: 'design' },
   { id: 'design-4', title: 'Laser-engraved Coasters', media: 'Vector Graphics, Illustrator, 2024', description: 'A sampling of coasters in use.', imageSrc: '/images/Designs/ThursdayPints3.jpg', category: 'design' },
   { id: 'design-3', title: 'Water Works Logo', media: 'Vector Graphics, Illustrator, 2024', description: 'New Logo for 1883 Water Works, a local historical landmark (design not accepted!).', imageSrc: '/images/Designs/WaterWorks.jpg', category: 'design' },
-  { id: 'design-2', title: 'Analemic Sundial', media: 'Vector Graphics, Computer generated, Cast Bronze.', description: 'Accurate to 30 seconds, algorithmically generated', imageSrc: '/images/Designs/SundialInBronze.jpg', category: 'design' },
-  { id: 'design-1', title: 'Analemic Sundial', media: 'Vector Graphics, Computer generated, 1985-2024', description: 'Accurate to 30 seconds, algorithmically generated, xy plotter.', imageSrc: '/images/Designs/SundialOnDeck.jpg', category: 'design' },
 
   // Photography
   { id: 'photo-5', title: 'Ripples', media: 'Digital photography, HP PhotoSmart C945, 2003', description: 'One of those lucky shots. Notice the droplet and its reflection.', imageSrc: '/images/Photography/Ripples.jpg', category: 'photography' },
