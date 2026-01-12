@@ -70,7 +70,7 @@ const CollectionSamples: React.FC = () => {
             to="/gallery/design"
             className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
           >
-            Designs
+            Graphics
           </Link>
           <Link
             to="/gallery/photography"

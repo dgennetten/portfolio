@@ -109,7 +109,7 @@ const Navigation: React.FC = () => {
                       : 'text-gray-600 hover:text-black transition-colors duration-200'
                   }
                 >
-                  Designs
+                  Graphics
                 </NavLink>
               </li>
               <li>

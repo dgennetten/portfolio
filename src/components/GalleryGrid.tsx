@@ -10,7 +10,7 @@ const categoryNames: Record<Category, string> = {
   sculptures: 'Sculptures',
   prints: 'Prints',
   geometric: 'Geometrics',
-  design: 'Designs',
+  design: 'Graphics',
   photography: 'Photographs',
   WIPdrawings: 'Works In Progress - Drawings',
   WIPsculptures: 'Works In Progress - Sculptures',
@@ -29,6 +29,9 @@ const GalleryGrid: React.FC = () => {
     if (category) {
       const categoryArtworks = getCategoryArtworks(category);
       setArtworks(categoryArtworks);
+      // Reset modal state when category changes
+      setIsModalOpen(false);
+      setSelectedArtwork(null);
     }
   }, [category]);
 
