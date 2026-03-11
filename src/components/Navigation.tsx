@@ -121,7 +121,7 @@ const Navigation: React.FC = () => {
                       : 'text-gray-600 hover:text-black transition-colors duration-200'
                   }
                 >
-                  Photo
+                  Snap
                 </NavLink>
               </li>
               <li>

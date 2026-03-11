@@ -11,7 +11,7 @@ const categoryNames: Record<Category, string> = {
   prints: 'Print',
   geometric: 'Geom',
   design: 'Design',
-  photography: 'Photo',
+  photography: 'Snap',
   code: 'Code',
   WIPdrawings: 'Works In Progress - Drawings',
   WIPsculptures: 'Works In Progress - Sculptures',

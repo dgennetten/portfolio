@@ -82,7 +82,7 @@ const CollectionSamples: React.FC = () => {
             to="/gallery/photography"
             className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
           >
-            Photo
+            Snap
           </Link>
           <Link
             to="/gallery/code"

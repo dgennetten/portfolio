@@ -114,7 +114,7 @@ const MobileNavigation: React.FC = () => {
               `}
             >
               <Aperture size={20} />
-              <span className="text-xs mt-1">Photo</span>
+              <span className="text-xs mt-1">Snap</span>
             </NavLink>
           </li>
           <li className="flex-1">
