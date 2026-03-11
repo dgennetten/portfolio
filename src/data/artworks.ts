@@ -96,6 +96,11 @@ export const artworks: Artwork[] = [
   { id: 'photo-2', title: 'Untitled', media: 'Digital photography, Nikon D300, 2009`', description: 'Cannot recall name of monument, Tokyo, Japan.', imageSrc: '/images/Photography/Tokyo02232009.jpg', category: 'photography' },
   { id: 'photo-1', title: 'Untitled', media: 'Digital photography, Olympus prototype, 1999`', description: 'These bonnett and apron decorations are in honor of a still-born or aborted child. Tokyo, Japan.', imageSrc: '/images/Photography/Tokyo10231999.jpg', category: 'photography' },
 
+  // Code — add entries with category: 'code'. imageSrc can be a screenshot URL or path under public/images/Code/
+  { id: 'code-1', title: 'This portfolio', media: 'React, TypeScript, Vite, Tailwind', description: 'The site you\'re viewing. Replace this placeholder with your own projects.', imageSrc: 'https://placehold.co/600x600/1e3a5f/fff?text=Portfolio', category: 'code' },
+  { id: 'code-2', title: 'Project placeholder', media: 'Stack / year', description: 'Add title, media, description, and imageSrc (screenshot or /images/Code/your-image.jpg).', imageSrc: 'https://placehold.co/600x600/2d4a6f/fff?text=Project+2', category: 'code' },
+  { id: 'code-3', title: 'Another project', media: 'Stack / year', description: 'Duplicate this object to add more Code entries. Use unique id (e.g. code-4, code-5).', imageSrc: 'https://placehold.co/600x600/3d5a7f/fff?text=Project+3', category: 'code' },
+
   // WIP Drawings
   { id: 'WIPdrawing-2', title: 'Belvedere', media: 'Charcoal on paper, 18 x 24 inches', description: 'In progress, charcoal drawing of the Belvedere Torlonia, a classical sculpture. (this is harder than it looks!)', imageSrc: '/images/Drawings/Belvedere.jpg', category: 'WIPdrawings' },
 

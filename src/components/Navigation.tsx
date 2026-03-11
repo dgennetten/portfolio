@@ -49,7 +49,7 @@ const Navigation: React.FC = () => {
                       : 'text-gray-600 hover:text-black transition-colors duration-200'
                   }
                 >
-                  Drawings
+                  Draw
                 </NavLink>
               </li>
               <li>
@@ -61,7 +61,7 @@ const Navigation: React.FC = () => {
                       : 'text-gray-600 hover:text-black transition-colors duration-200'
                   }
                 >
-                  Paintings
+                  Paint
                 </NavLink>
               </li>
               <li>
@@ -73,7 +73,7 @@ const Navigation: React.FC = () => {
                       : 'text-gray-600 hover:text-black transition-colors duration-200'
                   }
                 >
-                  Sculptures
+                  Sculpt
                 </NavLink>
               </li>
               <li>
@@ -85,7 +85,7 @@ const Navigation: React.FC = () => {
                       : 'text-gray-600 hover:text-black transition-colors duration-200'
                   }
                 >
-                  Prints
+                  Print
                 </NavLink>
               </li>
               <li>
@@ -97,7 +97,7 @@ const Navigation: React.FC = () => {
                       : 'text-gray-600 hover:text-black transition-colors duration-200'
                   }
                 >
-                  Geometrics
+                  Geom
                 </NavLink>
               </li>
               <li>
@@ -109,7 +109,7 @@ const Navigation: React.FC = () => {
                       : 'text-gray-600 hover:text-black transition-colors duration-200'
                   }
                 >
-                  Graphics
+                  Design
                 </NavLink>
               </li>
               <li>
@@ -121,7 +121,19 @@ const Navigation: React.FC = () => {
                       : 'text-gray-600 hover:text-black transition-colors duration-200'
                   }
                 >
-                  Photographs
+                  Photo
+                </NavLink>
+              </li>
+              <li>
+                <NavLink 
+                  to="/gallery/code"
+                  className={({ isActive }) => 
+                    isActive 
+                      ? 'text-black border-b border-black pb-1' 
+                      : 'text-gray-600 hover:text-black transition-colors duration-200'
+                  }
+                >
+                  Code
                 </NavLink>
               </li>
               <li>

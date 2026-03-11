@@ -46,37 +46,49 @@ const CollectionSamples: React.FC = () => {
             to="/gallery/drawings"
             className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
           >
-            Drawings
+            Draw
           </Link>
           <Link
             to="/gallery/paintings"
             className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
           >
-            Paintings
+            Paint
           </Link>
           <Link
             to="/gallery/sculptures"
             className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
           >
-            Sculptures
+            Sculpt
+          </Link>
+          <Link
+            to="/gallery/prints"
+            className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
+          >
+            Print
           </Link>
           <Link
             to="/gallery/geometric"
             className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
           >
-            Geometrics
+            Geom
           </Link>
           <Link
             to="/gallery/design"
             className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
           >
-            Graphics
+            Design
           </Link>
           <Link
             to="/gallery/photography"
             className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
           >
-            Photographs
+            Photo
+          </Link>
+          <Link
+            to="/gallery/code"
+            className="inline-block px-6 py-0 border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white transition-all duration-300"
+          >
+            Code
           </Link>
         </div>
       </div>

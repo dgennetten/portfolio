@@ -5,13 +5,14 @@ import { getCategoryArtworks } from '../data/artworks';
 import ImageModal from './ImageModal';
 
 const categoryNames: Record<Category, string> = {
-  drawings: 'Drawings',
-  paintings: 'Paintings',
-  sculptures: 'Sculptures',
-  prints: 'Prints',
-  geometric: 'Geometrics',
-  design: 'Graphics',
-  photography: 'Photographs',
+  drawings: 'Draw',
+  paintings: 'Paint',
+  sculptures: 'Sculpt',
+  prints: 'Print',
+  geometric: 'Geom',
+  design: 'Design',
+  photography: 'Photo',
+  code: 'Code',
   WIPdrawings: 'Works In Progress - Drawings',
   WIPsculptures: 'Works In Progress - Sculptures',
   WIPkinetics: 'Works In Progress - Kinetic Sculptures',
