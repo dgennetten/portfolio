@@ -126,9 +126,9 @@ export const artworks: Artwork[] = [
 ];
 
 export const featuredArtworks: Artwork[] = [
-  artworks.find(art => art.id === 'drawing-1')!,
-  artworks.find(art => art.id === 'geometric-8')!,
-  artworks.find(art => art.id === 'sculpture-13')!,
+  artworks.find(art => art.id === 'painting-3')!,   // Profile in Guache
+  artworks.find(art => art.id === 'sculpture-29')!,  // Final Day at MARBLEmarble36!
+  artworks.find(art => art.id === 'photo-4')!,       // Sunrise over Trappers Lake
 ];
 
 export const getCategoryArtworks = (category: string) => {
