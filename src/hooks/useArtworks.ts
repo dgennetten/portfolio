@@ -37,13 +37,13 @@ async function staticFeatured(): Promise<Artwork[]> {
 // ── Live API fetches (production) ─────────────────────────────────────────────
 
 async function apiCategory(category: string): Promise<Artwork[]> {
-  const res = await fetch(`/api/artworks.php?category=${encodeURIComponent(category)}`);
+  const res = await fetch(`/api/artworks.php?category=${encodeURIComponent(category)}`, { cache: 'no-store' });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.json() as Promise<Artwork[]>;
 }
 
 async function apiFeatured(): Promise<Artwork[]> {
-  const res = await fetch('/api/artworks.php?featured=1');
+  const res = await fetch('/api/artworks.php?featured=1', { cache: 'no-store' });
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   return res.json() as Promise<Artwork[]>;
 }
@@ -56,7 +56,7 @@ export function useArtworks(category: string) {
     queryFn: import.meta.env.DEV
       ? () => staticCategory(category)
       : () => apiCategory(category),
-    staleTime: 1000 * 60 * 5,
+    staleTime: import.meta.env.DEV ? 1000 * 60 * 5 : 0,
     retry: false,
   });
 }
@@ -65,7 +65,7 @@ export function useFeaturedArtworks() {
   return useQuery({
     queryKey: ['artworks', 'featured'],
     queryFn: import.meta.env.DEV ? staticFeatured : apiFeatured,
-    staleTime: 1000 * 60 * 5,
+    staleTime: import.meta.env.DEV ? 1000 * 60 * 5 : 0,
     retry: false,
   });
 }

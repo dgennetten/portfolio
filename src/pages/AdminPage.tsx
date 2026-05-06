@@ -1,9 +1,10 @@
 import React, { useState, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import AdminLoginModal from '../components/admin/AdminLoginModal';
-import { useAllArtworks, useCreateArtwork, useUpdateArtwork, useDeleteArtwork, useUploadImage } from '../hooks/useAdmin';
+import { useAllArtworks, useCreateArtwork, useUpdateArtwork, useDeleteArtwork, useUploadImage, useReorderArtworks } from '../hooks/useAdmin';
 import type { Artwork, Category } from '../types';
-import { Loader2, Pencil, Trash2, Plus, Star, StarOff, LogOut, Upload, X } from 'lucide-react';
+import { Loader2, Pencil, Trash2, Plus, Star, StarOff, LogOut, Upload, X, ChevronUp, ChevronDown, ArrowLeft } from 'lucide-react';
 
 const CATEGORIES: Category[] = [
   'drawings', 'paintings', 'sculptures', 'prints', 'geometric',
@@ -23,6 +24,7 @@ export default function AdminPage() {
   const createArtwork  = useCreateArtwork();
   const updateArtwork  = useUpdateArtwork();
   const deleteArtwork  = useDeleteArtwork();
+  const reorderArtworks = useReorderArtworks();
   const uploadImage    = useUploadImage();
 
   const [filterCat, setFilterCat]         = useState<string>('all');
@@ -59,7 +61,7 @@ export default function AdminPage() {
 
   function openNew() {
     setEditingArtwork(null);
-    setForm(emptyForm());
+    setForm({ ...emptyForm(), category: filterCat !== 'all' ? filterCat as Category : 'drawings' });
     setFormError('');
     setShowForm(true);
   }
@@ -114,6 +116,24 @@ export default function AdminPage() {
     }
   }
 
+  async function moveArtwork(a: Artwork, direction: 'up' | 'down') {
+    const same = artworks.filter(x => x.category === a.category)
+      .sort((x, y) => x.display_order - y.display_order || x.id - y.id);
+    const idx = same.findIndex(x => x.id === a.id);
+    const swapIdx = direction === 'up' ? idx - 1 : idx + 1;
+    if (swapIdx < 0 || swapIdx >= same.length) return;
+    const reordered = [...same];
+    const [item] = reordered.splice(idx, 1);
+    reordered.splice(swapIdx, 0, item);
+    try {
+      await reorderArtworks.mutateAsync(
+        reordered.map((x, i) => ({ id: x.id, display_order: i }))
+      );
+    } catch (err) {
+      alert(err instanceof Error ? err.message : 'Reorder failed');
+    }
+  }
+
   async function toggleFeatured(a: Artwork) {
     const featuredOnes = artworks.filter(x => x.is_featured);
     const newOrder = a.is_featured ? null : (featuredOnes.length + 1);
@@ -126,6 +146,10 @@ export default function AdminPage() {
       <header className="bg-white border-b border-stone-200 px-6 py-4 flex items-center justify-between">
         <h1 className="text-lg font-light tracking-widest uppercase text-stone-700">Portfolio Admin</h1>
         <div className="flex items-center gap-4">
+          <Link to="/" className="flex items-center gap-1.5 text-sm text-stone-400 hover:text-stone-700 transition-colors">
+            <ArrowLeft className="w-4 h-4" /> Portfolio
+          </Link>
+          <span className="text-stone-200">|</span>
           <span className="text-sm text-stone-400">{user.email}</span>
           <button onClick={logout} className="flex items-center gap-1.5 text-sm text-stone-400 hover:text-stone-700 transition-colors">
             <LogOut className="w-4 h-4" /> Sign out
@@ -186,7 +210,19 @@ export default function AdminPage() {
                       </button>
                     </td>
                     <td className="px-4 py-2 text-right">
-                      <div className="flex items-center justify-end gap-2">
+                      <div className="flex items-center justify-end gap-1">
+                        {filterCat !== 'all' && (<>
+                          <button onClick={() => moveArtwork(a, 'up')} title="Move up"
+                            disabled={reorderArtworks.isPending}
+                            className="p-1.5 text-stone-300 hover:text-stone-600 disabled:opacity-30 transition-colors">
+                            <ChevronUp className="w-3.5 h-3.5" />
+                          </button>
+                          <button onClick={() => moveArtwork(a, 'down')} title="Move down"
+                            disabled={reorderArtworks.isPending}
+                            className="p-1.5 text-stone-300 hover:text-stone-600 disabled:opacity-30 transition-colors">
+                            <ChevronDown className="w-3.5 h-3.5" />
+                          </button>
+                        </>)}
                         <button onClick={() => openEdit(a)} className="p-1.5 text-stone-400 hover:text-stone-700 transition-colors">
                           <Pencil className="w-3.5 h-3.5" />
                         </button>

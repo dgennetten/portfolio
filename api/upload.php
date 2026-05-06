@@ -14,7 +14,16 @@ if (empty($_FILES['image'])) {
 }
 
 $file    = $_FILES['image'];
-$category = preg_replace('/[^a-zA-Z0-9_-]/', '', $_POST['category'] ?? 'misc');
+$categorySlug = preg_replace('/[^a-zA-Z0-9_-]/', '', $_POST['category'] ?? 'misc');
+// Server image folders are capitalized (e.g. Drawings, not drawings)
+$folderMap = [
+    'drawings' => 'Drawings', 'paintings' => 'Paintings', 'sculptures' => 'Sculptures',
+    'prints' => 'Prints', 'geometric' => 'Geometric', 'design' => 'Design',
+    'photography' => 'Photography', 'code' => 'Code',
+    'WIPdrawings' => 'WIPdrawings', 'WIPsculptures' => 'WIPsculptures',
+    'WIPkinetics' => 'Kinetics', 'WIPprints' => 'WIPprints',
+];
+$category = $folderMap[$categorySlug] ?? ucfirst($categorySlug);
 
 if ($file['error'] !== UPLOAD_ERR_OK) {
     json_error('Upload error: ' . $file['error']);

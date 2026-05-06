@@ -1,12 +1,18 @@
 import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
 import type { Artwork } from '../types';
+import { getStoredAuthToken } from '../services/authService';
 
 type ArtworkInput = Omit<Artwork, 'id' | 'created_at' | 'updated_at'>;
 
 async function apiFetch(path: string, options: RequestInit = {}): Promise<unknown> {
+  const token = getStoredAuthToken();
   const res = await fetch(path, {
     credentials: 'include',
-    headers: { 'Content-Type': 'application/json', ...options.headers },
+    headers: {
+      'Content-Type': 'application/json',
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+      ...options.headers,
+    },
     ...options,
   });
   const data = await res.json();
@@ -53,17 +59,26 @@ export function useReorderArtworks() {
   return useMutation({
     mutationFn: (order: { id: number; display_order: number }[]) =>
       apiFetch('/api/artworks.php', { method: 'PATCH', body: JSON.stringify({ order }) }),
-    onSuccess: () => qc.invalidateQueries({ queryKey: ['artworks'] }),
+    onSuccess: () => Promise.all([
+      qc.invalidateQueries({ queryKey: ['artworks'] }),
+      qc.invalidateQueries({ queryKey: ['admin', 'artworks'] }),
+    ]),
   });
 }
 
 export function useUploadImage() {
   return useMutation({
     mutationFn: async ({ file, category }: { file: File; category: string }): Promise<{ path: string }> => {
+      const token = getStoredAuthToken();
       const form = new FormData();
       form.append('image', file);
       form.append('category', category);
-      const res = await fetch('/api/upload.php', { method: 'POST', credentials: 'include', body: form });
+      const res = await fetch('/api/upload.php', {
+        method: 'POST',
+        credentials: 'include',
+        headers: token ? { Authorization: `Bearer ${token}` } : {},
+        body: form,
+      });
       const data = await res.json() as { path?: string; error?: string };
       if (!res.ok) throw new Error(data.error ?? 'Upload failed');
       return data as { path: string };

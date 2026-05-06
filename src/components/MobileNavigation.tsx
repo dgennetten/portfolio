@@ -21,10 +21,9 @@ const MobileNavigation: React.FC = () => {
   return (
     <>
       <header className="fixed top-0 left-0 right-0 z-40 bg-canvas/95 backdrop-blur border-b border-stone-200/60">
-        <div className="flex justify-center items-center h-12">
-          <NavLink to="/" className="text-xs font-light tracking-widest uppercase text-ink">
-            K. Douglas Gennetten
-          </NavLink>
+        <div className="flex justify-center items-center h-12 text-xs font-light tracking-widest uppercase text-ink">
+          <NavLink to="/admin" className="hover:text-accent transition-colors duration-150">K.</NavLink>
+          <NavLink to="/" className="text-ink hover:text-ink"> Douglas Gennetten</NavLink>
         </div>
       </header>
 
