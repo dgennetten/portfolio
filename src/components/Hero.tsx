@@ -1,12 +1,18 @@
 import React from 'react';
+import { useSettings } from '../hooks/useSettings';
+
+const FALLBACK_IMAGE = '/images/Paintings/Car25.jpg';
 
 const Hero: React.FC = () => {
+  const { data: settings } = useSettings();
+  const heroImage = settings?.hero_image ?? FALLBACK_IMAGE;
+
   return (
     <div className="relative h-screen flex items-end overflow-hidden">
       {/* Full-bleed background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: "url('/images/Paintings/Car25.jpg')", filter: 'brightness(0.55)' }}
+        style={{ backgroundImage: `url('${heroImage}')`, filter: 'brightness(0.55)' }}
       />
 
       {/* Bottom-left editorial text block */}

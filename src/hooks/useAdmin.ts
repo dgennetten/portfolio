@@ -66,6 +66,15 @@ export function useReorderArtworks() {
   });
 }
 
+export function useUpdateSetting() {
+  const qc = useQueryClient();
+  return useMutation({
+    mutationFn: ({ key, value }: { key: string; value: string }) =>
+      apiFetch('/api/settings.php', { method: 'PUT', body: JSON.stringify({ key, value }) }),
+    onSuccess: () => qc.invalidateQueries({ queryKey: ['settings'] }),
+  });
+}
+
 export function useUploadImage() {
   return useMutation({
     mutationFn: async ({ file, category }: { file: File; category: string }): Promise<{ path: string }> => {

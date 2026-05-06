@@ -2,9 +2,10 @@ import React, { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
 import AdminLoginModal from '../components/admin/AdminLoginModal';
-import { useAllArtworks, useCreateArtwork, useUpdateArtwork, useDeleteArtwork, useUploadImage, useReorderArtworks } from '../hooks/useAdmin';
+import { useAllArtworks, useCreateArtwork, useUpdateArtwork, useDeleteArtwork, useUploadImage, useReorderArtworks, useUpdateSetting } from '../hooks/useAdmin';
+import { useSettings } from '../hooks/useSettings';
 import type { Artwork, Category } from '../types';
-import { Loader2, Pencil, Trash2, Plus, Star, StarOff, LogOut, Upload, X, ChevronUp, ChevronDown, ArrowLeft } from 'lucide-react';
+import { Loader2, Pencil, Trash2, Plus, Star, StarOff, LogOut, Upload, X, ChevronUp, ChevronDown, ArrowLeft, ImageIcon } from 'lucide-react';
 
 const CATEGORIES: Category[] = [
   'drawings', 'paintings', 'sculptures', 'prints', 'geometric',
@@ -26,6 +27,8 @@ export default function AdminPage() {
   const deleteArtwork  = useDeleteArtwork();
   const reorderArtworks = useReorderArtworks();
   const uploadImage    = useUploadImage();
+  const updateSetting  = useUpdateSetting();
+  const { data: settings } = useSettings();
 
   const [filterCat, setFilterCat]         = useState<string>('all');
   const [editingArtwork, setEditingArtwork] = useState<Artwork | null>(null);
@@ -34,7 +37,10 @@ export default function AdminPage() {
   const [confirmDelete, setConfirmDelete]  = useState<number | null>(null);
   const [formError, setFormError]          = useState('');
   const [uploading, setUploading]          = useState(false);
-  const fileRef = useRef<HTMLInputElement>(null);
+  const [heroUploading, setHeroUploading]  = useState(false);
+  const [heroError, setHeroError]          = useState('');
+  const fileRef     = useRef<HTMLInputElement>(null);
+  const heroFileRef = useRef<HTMLInputElement>(null);
 
   if (!user) {
     return (
@@ -134,6 +140,22 @@ export default function AdminPage() {
     }
   }
 
+  async function handleHeroUpload(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    if (!file) return;
+    setHeroUploading(true);
+    setHeroError('');
+    try {
+      const { path } = await uploadImage.mutateAsync({ file, category: 'hero' });
+      await updateSetting.mutateAsync({ key: 'hero_image', value: path });
+    } catch (err) {
+      setHeroError(err instanceof Error ? err.message : 'Upload failed');
+    } finally {
+      setHeroUploading(false);
+      if (heroFileRef.current) heroFileRef.current.value = '';
+    }
+  }
+
   async function toggleFeatured(a: Artwork) {
     const featuredOnes = artworks.filter(x => x.is_featured);
     const newOrder = a.is_featured ? null : (featuredOnes.length + 1);
@@ -158,6 +180,33 @@ export default function AdminPage() {
       </header>
 
       <div className="max-w-6xl mx-auto px-6 py-8">
+        {/* Hero Image */}
+        <div className="bg-white border border-stone-200 px-5 py-4 mb-6 flex items-center gap-5">
+          <div className="shrink-0">
+            {settings?.hero_image ? (
+              <img src={settings.hero_image} alt="Hero" className="h-16 w-28 object-cover rounded border border-stone-200" />
+            ) : (
+              <div className="h-16 w-28 bg-stone-100 rounded border border-stone-200 flex items-center justify-center">
+                <ImageIcon className="w-5 h-5 text-stone-300" />
+              </div>
+            )}
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="text-xs font-medium text-stone-500 uppercase tracking-wide mb-1">Hero Image</p>
+            <p className="text-xs text-stone-400 truncate">{settings?.hero_image ?? '—'}</p>
+            {heroError && <p className="text-xs text-red-500 mt-1">{heroError}</p>}
+          </div>
+          <button
+            onClick={() => heroFileRef.current?.click()}
+            disabled={heroUploading}
+            className="flex items-center gap-1.5 px-4 py-2 border border-stone-300 text-sm text-stone-600 hover:bg-stone-50 disabled:opacity-50 transition-colors shrink-0"
+          >
+            {heroUploading ? <Loader2 className="w-4 h-4 animate-spin" /> : <Upload className="w-4 h-4" />}
+            Change
+          </button>
+          <input ref={heroFileRef} type="file" accept="image/*" onChange={handleHeroUpload} className="hidden" />
+        </div>
+
         {/* Toolbar */}
         <div className="flex flex-wrap items-center gap-3 mb-6">
           <button

@@ -22,6 +22,7 @@ $folderMap = [
     'photography' => 'Photography', 'code' => 'Code',
     'WIPdrawings' => 'WIPdrawings', 'WIPsculptures' => 'WIPsculptures',
     'WIPkinetics' => 'Kinetics', 'WIPprints' => 'WIPprints',
+    'hero' => 'Hero',
 ];
 $category = $folderMap[$categorySlug] ?? ucfirst($categorySlug);
 
