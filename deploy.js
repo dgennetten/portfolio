@@ -48,6 +48,18 @@ async function deployToDreamHost() {
 
     console.log('Uploading dist folder contents...');
     await uploadDirectory(client, localDistPath, remoteBasePath);
+
+    // Upload PHP API (excluding .env — credentials stay on the server)
+    const localApiPath = path.join(__dirname, 'api');
+    try {
+      await fs.access(localApiPath);
+      console.log('Uploading api/ directory...');
+      await uploadDirectory(client, localApiPath, `${remoteBasePath}/api`, ['.env']);
+      console.log('API uploaded successfully.');
+    } catch {
+      console.log('No api/ directory found, skipping.');
+    }
+
     console.log('Upload completed successfully.');
 
   } catch (err) {
@@ -96,7 +108,7 @@ async function deleteRemoteDirectory(client, remotePath) {
   }
 }
 
-async function uploadDirectory(client, localPath, remotePath) {
+async function uploadDirectory(client, localPath, remotePath, exclude = []) {
   const items = await fs.readdir(localPath, { withFileTypes: true });
 
   await new Promise((resolve, reject) => {
@@ -107,11 +119,15 @@ async function uploadDirectory(client, localPath, remotePath) {
   });
 
   for (const item of items) {
+    if (exclude.includes(item.name)) {
+      console.log(`Skipping excluded: ${item.name}`);
+      continue;
+    }
     const localItemPath = path.join(localPath, item.name);
     const remoteItemPath = `${remotePath}/${item.name}`;
 
     if (item.isDirectory()) {
-      await uploadDirectory(client, localItemPath, remoteItemPath);
+      await uploadDirectory(client, localItemPath, remoteItemPath, exclude);
     } else {
       await new Promise((resolve, reject) => {
         client.put(localItemPath, remoteItemPath, (err) => {

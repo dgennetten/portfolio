@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\dougl\\\\GIT\\\\portfolio\\\\public\" -Recurse | ForEach-Object { $_.FullName.Replace\\('C:\\\\Users\\\\dougl\\\\GIT\\\\portfolio\\\\', ''\\) } | Sort-Object)",
+      "Bash(npm install *)",
+      "Bash(npm run *)"
+    ]
+  }
+}

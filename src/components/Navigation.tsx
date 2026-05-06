@@ -1,153 +1,68 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { NavLink, useLocation } from 'react-router-dom';
 import { useMediaQuery } from '../hooks/useMediaQuery';
 import MobileNavigation from './MobileNavigation';
 
+const navLinks = [
+  { to: '/gallery/drawings',    label: 'Draw'   },
+  { to: '/gallery/paintings',   label: 'Paint'  },
+  { to: '/gallery/sculptures',  label: 'Sculpt' },
+  { to: '/gallery/prints',      label: 'Print'  },
+  { to: '/gallery/geometric',   label: 'Geom'   },
+  { to: '/gallery/design',      label: 'Design' },
+  { to: '/gallery/photography', label: 'Snap'   },
+  { to: '/gallery/code',        label: 'Code'   },
+  { to: '/bio',                 label: 'Bio'    },
+];
+
 const Navigation: React.FC = () => {
   const isMobile = useMediaQuery('(max-width: 768px)');
   const location = useLocation();
+  const [scrolled, setScrolled] = useState(false);
+  const isHome = location.pathname === '/';
 
-  // Scroll to top on route change
+  useEffect(() => { window.scrollTo(0, 0); }, [location]);
+
   useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [location]);
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
-  if (isMobile) {
-    return <MobileNavigation />;
-  }
+  if (isMobile) return <MobileNavigation />;
+
+  // On the homepage, nav is transparent until scrolled; elsewhere it's the canvas bg
+  const bg = isHome
+    ? (scrolled ? 'bg-canvas/95 backdrop-blur border-b border-stone-200/60' : 'bg-transparent')
+    : 'bg-canvas/95 backdrop-blur border-b border-stone-200/60';
+
+  const textBase = isHome && !scrolled ? 'text-white/80 hover:text-white' : 'text-stone-500 hover:text-ink';
+  const nameColor = isHome && !scrolled ? 'text-white' : 'text-ink';
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-40 bg-white bg-opacity-90 backdrop-blur-sm">
-      <div className="container mx-auto px-4">
-        <div className="flex justify-between items-center h-16">
-          <div className="text-xl font-light tracking-wide">
-            <NavLink to="/" className="hover:opacity-70 transition-opacity duration-200">
-              Douglas Gennetten
-            </NavLink>
-          </div>
-          
+    <header className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${bg}`}>
+      <div className="container mx-auto px-6">
+        <div className="flex justify-between items-center h-14">
+          <NavLink to="/" className={`text-sm font-light tracking-widest uppercase transition-colors duration-200 ${nameColor}`}>
+            Douglas Gennetten
+          </NavLink>
+
           <nav>
-            <ul className="flex gap-8">
-              {/* <li>
-                <NavLink 
-                  to="/"
-                  className={({ isActive }) => 
-                    isActive 
-                      ? 'text-black border-b border-black pb-1' 
-                      : 'text-gray-600 hover:text-black transition-colors duration-200'
-                  }
-                >
-                  Home
-                </NavLink>
-              </li> */}
-              <li>
-                <NavLink 
-                  to="/gallery/drawings"
-                  className={({ isActive }) => 
-                    isActive 
-                      ? 'text-black border-b border-black pb-1' 
-                      : 'text-gray-600 hover:text-black transition-colors duration-200'
-                  }
-                >
-                  Draw
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/gallery/paintings"
-                  className={({ isActive }) => 
-                    isActive 
-                      ? 'text-black border-b border-black pb-1' 
-                      : 'text-gray-600 hover:text-black transition-colors duration-200'
-                  }
-                >
-                  Paint
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/gallery/sculptures"
-                  className={({ isActive }) => 
-                    isActive 
-                      ? 'text-black border-b border-black pb-1' 
-                      : 'text-gray-600 hover:text-black transition-colors duration-200'
-                  }
-                >
-                  Sculpt
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/gallery/prints"
-                  className={({ isActive }) => 
-                    isActive 
-                      ? 'text-black border-b border-black pb-1' 
-                      : 'text-gray-600 hover:text-black transition-colors duration-200'
-                  }
-                >
-                  Print
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/gallery/geometric"
-                  className={({ isActive }) => 
-                    isActive 
-                      ? 'text-black border-b border-black pb-1' 
-                      : 'text-gray-600 hover:text-black transition-colors duration-200'
-                  }
-                >
-                  Geom
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/gallery/design"
-                  className={({ isActive }) => 
-                    isActive 
-                      ? 'text-black border-b border-black pb-1' 
-                      : 'text-gray-600 hover:text-black transition-colors duration-200'
-                  }
-                >
-                  Design
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/gallery/photography"
-                  className={({ isActive }) => 
-                    isActive 
-                      ? 'text-black border-b border-black pb-1' 
-                      : 'text-gray-600 hover:text-black transition-colors duration-200'
-                  }
-                >
-                  Snap
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/gallery/code"
-                  className={({ isActive }) => 
-                    isActive 
-                      ? 'text-black border-b border-black pb-1' 
-                      : 'text-gray-600 hover:text-black transition-colors duration-200'
-                  }
-                >
-                  Code
-                </NavLink>
-              </li>
-              <li>
-                <NavLink 
-                  to="/bio"
-                  className={({ isActive }) => 
-                    isActive 
-                      ? 'text-black border-b border-black pb-1' 
-                      : 'text-gray-600 hover:text-black transition-colors duration-200'
-                  }
-                >
-                  Bio
-                </NavLink>
-              </li>
+            <ul className="flex gap-7">
+              {navLinks.map(({ to, label }) => (
+                <li key={to}>
+                  <NavLink
+                    to={to}
+                    className={({ isActive }) =>
+                      isActive
+                        ? 'text-accent text-xs tracking-widest uppercase border-b border-accent pb-0.5'
+                        : `${textBase} text-xs tracking-widest uppercase transition-colors duration-200`
+                    }
+                  >
+                    {label}
+                  </NavLink>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>

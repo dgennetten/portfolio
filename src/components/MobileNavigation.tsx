@@ -1,146 +1,57 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import { Home, Pencil, Brush, Box, Layers, DraftingCompass, PenTool, Aperture, Code, User } from 'lucide-react';
 
+const navItems = [
+  { to: '/',                    icon: Home,             label: 'Home'   },
+  { to: '/gallery/drawings',    icon: Pencil,           label: 'Draw'   },
+  { to: '/gallery/paintings',   icon: Brush,            label: 'Paint'  },
+  { to: '/gallery/sculptures',  icon: Box,              label: 'Sculpt' },
+  { to: '/gallery/prints',      icon: Layers,           label: 'Print'  },
+  { to: '/gallery/geometric',   icon: DraftingCompass,  label: 'Geom'   },
+  { to: '/gallery/design',      icon: PenTool,          label: 'Design' },
+  { to: '/gallery/photography', icon: Aperture,         label: 'Snap'   },
+  { to: '/gallery/code',        icon: Code,             label: 'Code'   },
+  { to: '/bio',                 icon: User,             label: 'Bio'    },
+];
+
 const MobileNavigation: React.FC = () => {
+  const { pathname } = useLocation();
+
   return (
     <>
-      {/* Hidden header for mobile */}
-      <header className="fixed top-0 left-0 right-0 z-40 bg-white bg-opacity-90 backdrop-blur-sm">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-center items-center h-16">
-            <div className="text-xl font-light tracking-wide">
-              <NavLink to="/" className="hover:opacity-70 transition-opacity duration-200">
-                K. Douglas Gennetten
-              </NavLink>
-            </div>
-          </div>
+      <header className="fixed top-0 left-0 right-0 z-40 bg-canvas/95 backdrop-blur border-b border-stone-200/60">
+        <div className="flex justify-center items-center h-12">
+          <NavLink to="/" className="text-xs font-light tracking-widest uppercase text-ink">
+            K. Douglas Gennetten
+          </NavLink>
         </div>
       </header>
 
-      {/* Bottom navigation bar */}
-      <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white bg-opacity-90 backdrop-blur-sm border-t border-gray-200">
+      <nav className="fixed bottom-0 left-0 right-0 z-40 bg-canvas/95 backdrop-blur border-t border-stone-200/60">
         <ul className="flex justify-around">
-          <li className="flex-1">
-            <NavLink 
-              to="/"
-              className={({ isActive }) => `
-                flex flex-col items-center py-3 
-                ${isActive ? 'text-black' : 'text-gray-500'}
-              `}
-            >
-              <Home size={20} />
-              <span className="text-xs mt-1">Home</span>
-            </NavLink>
-          </li>
-          <li className="flex-1">
-            <NavLink 
-              to="/gallery/drawings"
-              className={({ isActive }) => `
-                flex flex-col items-center py-3 
-                ${isActive ? 'text-black' : 'text-gray-500'}
-              `}
-            >
-              <Pencil size={20} />
-              <span className="text-xs mt-1">Draw</span>
-            </NavLink>
-          </li>
-          <li className="flex-1">
-            <NavLink 
-              to="/gallery/paintings"
-              className={({ isActive }) => `
-                flex flex-col items-center py-3 
-                ${isActive ? 'text-black' : 'text-gray-500'}
-              `}
-            >
-              <Brush size={20} />
-              <span className="text-xs mt-1">Paint</span>
-            </NavLink>
-          </li>
-          <li className="flex-1">
-            <NavLink 
-              to="/gallery/sculptures"
-              className={({ isActive }) => `
-                flex flex-col items-center py-3 
-                ${isActive ? 'text-black' : 'text-gray-500'}
-              `}
-            >
-              <Box size={20} />
-              <span className="text-xs mt-1">Sculpt</span>
-            </NavLink>
-          </li>
-          <li className="flex-1">
-            <NavLink 
-              to="/gallery/prints"
-              className={({ isActive }) => `
-                flex flex-col items-center py-3 
-                ${isActive ? 'text-black' : 'text-gray-500'}
-              `}
-            >
-              <Layers size={20} />
-              <span className="text-xs mt-1">Print</span>
-            </NavLink>
-          </li>
-          <li className="flex-1">
-            <NavLink 
-              to="/gallery/geometric"
-              className={({ isActive }) => `
-                flex flex-col items-center py-3 
-                ${isActive ? 'text-black' : 'text-gray-500'}
-              `}
-            >
-              <DraftingCompass size={20} />
-              <span className="text-xs mt-1">Geom</span>
-            </NavLink>
-          </li>
-          <li className="flex-1">
-            <NavLink 
-              to="/gallery/design"
-              className={({ isActive }) => `
-                flex flex-col items-center py-3 
-                ${isActive ? 'text-black' : 'text-gray-500'}
-              `}
-            >
-              <PenTool size={20} />
-              <span className="text-xs mt-1">Design</span>
-            </NavLink>
-          </li>
-          <li className="flex-1">
-            <NavLink 
-              to="/gallery/photography"
-              className={({ isActive }) => `
-                flex flex-col items-center py-3 
-                ${isActive ? 'text-black' : 'text-gray-500'}
-              `}
-            >
-              <Aperture size={20} />
-              <span className="text-xs mt-1">Snap</span>
-            </NavLink>
-          </li>
-          <li className="flex-1">
-            <NavLink 
-              to="/gallery/code"
-              className={({ isActive }) => `
-                flex flex-col items-center py-3 
-                ${isActive ? 'text-black' : 'text-gray-500'}
-              `}
-            >
-              <Code size={20} />
-              <span className="text-xs mt-1">Code</span>
-            </NavLink>
-          </li>
-          <li className="flex-1">
-            <NavLink 
-              to="/bio"
-              className={({ isActive }) => `
-                flex flex-col items-center py-3 
-                ${isActive ? 'text-black' : 'text-gray-500'}
-              `}
-            >
-              <User size={20} />
-              <span className="text-xs mt-1">Bio</span>
-            </NavLink>
-          </li>
+          {navItems.map(({ to, icon: Icon, label }) => {
+            const isActive = to === '/' ? pathname === '/' : pathname.startsWith(to);
+            return (
+              <li key={to} className="flex-1">
+                <NavLink
+                  to={to}
+                  className="flex flex-col items-center py-2.5 relative"
+                >
+                  <Icon
+                    size={18}
+                    className={`transition-colors duration-150 ${isActive ? 'text-accent' : 'text-stone-400'}`}
+                  />
+                  <span className={`text-[10px] mt-1 tracking-wide transition-colors duration-150 ${isActive ? 'text-accent font-medium' : 'text-stone-400'}`}>
+                    {label}
+                  </span>
+                  {isActive && (
+                    <span className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-accent rounded-full" />
+                  )}
+                </NavLink>
+              </li>
+            );
+          })}
         </ul>
       </nav>
     </>

@@ -4,7 +4,7 @@ import CollectionSamples from '../components/CollectionSamples';
 
 const BioPage: React.FC = () => {
   return (
-    <div className="pt-16 md:pt-24 pb-24 md:pb-0"> {/* Add padding to account for fixed nav */}
+    <div className="pt-14 pb-24 md:pb-0">
       <ArtistBio />
       <CollectionSamples />
     </div>
