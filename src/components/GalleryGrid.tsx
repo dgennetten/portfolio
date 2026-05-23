@@ -1,15 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
-import 'yet-another-react-lightbox/plugins/captions.css';
-import Captions from 'yet-another-react-lightbox/plugins/captions';
 import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen';
-import Video from 'yet-another-react-lightbox/plugins/video';
 import { useArtworks } from '../hooks/useArtworks';
 import type { Category } from '../types';
 
-// Extend YARL slide types with artwork metadata
 declare module 'yet-another-react-lightbox' {
   interface SlideImage {
     artworkMedia?: string | null;
@@ -37,6 +33,167 @@ const categoryLabels: Record<Category, string> = {
 };
 
 const isVideo = (src: string) => /\.(mp4|webm|ogg)$/i.test(src);
+
+type ExtendedSlide = {
+  src?: string;
+  title?: string;
+  type?: 'video';
+  sources?: { src: string; type: string }[];
+  artworkMedia?: string | null;
+  artworkDescription?: string | null;
+};
+
+const TextPanel: React.FC<{
+  slide: ExtendedSlide;
+  beside: boolean;
+}> = ({ slide, beside }) => (
+  <div
+    style={{
+      color: 'rgba(255,255,255,0.9)',
+      flexShrink: 0,
+      overflowY: 'auto',
+      ...(beside
+        ? {
+            width: '220px',
+            padding: '1.5rem 1.25rem',
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            borderLeft: '1px solid rgba(255,255,255,0.12)',
+          }
+        : {
+            width: '100%',
+            padding: '0.75rem 1.5rem 1rem',
+            textAlign: 'center',
+            borderTop: '1px solid rgba(255,255,255,0.12)',
+          }),
+    }}
+  >
+    {slide.title && (
+      <div style={{ fontSize: '0.95rem', fontWeight: 500, marginBottom: '0.3rem' }}>
+        {slide.title}
+      </div>
+    )}
+    {slide.artworkMedia && (
+      <div
+        style={{
+          fontSize: '0.65rem',
+          opacity: 0.55,
+          textTransform: 'uppercase',
+          letterSpacing: '0.12em',
+          marginBottom: slide.artworkDescription ? '0.6rem' : 0,
+        }}
+      >
+        {slide.artworkMedia}
+      </div>
+    )}
+    {slide.artworkDescription && (
+      <div
+        style={{ fontSize: '0.8rem', opacity: 0.75, lineHeight: 1.55 }}
+        dangerouslySetInnerHTML={{ __html: slide.artworkDescription }}
+      />
+    )}
+  </div>
+);
+
+const ArtworkSlide: React.FC<{ slide: ExtendedSlide; rect: { width: number; height: number } }> = ({
+  slide,
+  rect,
+}) => {
+  const [imageAspect, setImageAspect] = useState<number | null>(null);
+  const src = slide.src ?? '';
+  const isVideoSlide = slide.type === 'video';
+
+  useEffect(() => {
+    if (isVideoSlide || !src) return;
+    setImageAspect(null);
+    const img = new Image();
+    img.onload = () => setImageAspect(img.naturalWidth / img.naturalHeight);
+    img.src = src;
+  }, [src, isVideoSlide]);
+
+  const containerAspect = rect.width / rect.height;
+  const hasText = !!(slide.title || slide.artworkMedia || slide.artworkDescription);
+
+  // Portrait image in landscape container → text beside the image
+  const textBeside =
+    hasText && !isVideoSlide && imageAspect !== null && imageAspect < 1 && containerAspect > 1;
+
+  if (isVideoSlide) {
+    return (
+      <div
+        style={{
+          display: 'flex',
+          flexDirection: 'column',
+          width: '100%',
+          height: '100%',
+          alignItems: 'center',
+          justifyContent: 'center',
+        }}
+      >
+        <div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', minHeight: 0, width: '100%' }}>
+          <video
+            style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+            controls
+            autoPlay
+            loop
+            muted
+            playsInline
+          >
+            {slide.sources?.map((s) => (
+              <source key={s.src} src={s.src} type={s.type} />
+            ))}
+          </video>
+        </div>
+        {hasText && <TextPanel slide={slide} beside={false} />}
+      </div>
+    );
+  }
+
+  if (textBeside) {
+    return (
+      <div style={{ display: 'flex', flexDirection: 'row', width: '100%', height: '100%', alignItems: 'stretch' }}>
+        <div
+          style={{
+            flex: 1,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            minWidth: 0,
+          }}
+        >
+          <img
+            src={src}
+            alt={slide.title ?? ''}
+            style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+          />
+        </div>
+        <TextPanel slide={slide} beside />
+      </div>
+    );
+  }
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', width: '100%', height: '100%', alignItems: 'stretch' }}>
+      <div
+        style={{
+          flex: 1,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          minHeight: 0,
+        }}
+      >
+        <img
+          src={src}
+          alt={slide.title ?? ''}
+          style={{ maxWidth: '100%', maxHeight: '100%', objectFit: 'contain' }}
+        />
+      </div>
+      {hasText && <TextPanel slide={slide} beside={false} />}
+    </div>
+  );
+};
 
 const GalleryGrid: React.FC = () => {
   const { category } = useParams<{ category: Category }>();
@@ -116,25 +273,11 @@ const GalleryGrid: React.FC = () => {
         close={() => setLightboxIndex(-1)}
         index={lightboxIndex}
         slides={slides}
-        plugins={[Captions, Fullscreen, Video]}
-        captions={{ descriptionTextAlign: 'center', showToggle: true }}
+        plugins={[Fullscreen]}
         render={{
-          slideFooter: ({ slide }) => {
-            const desc = (slide as { artworkDescription?: string | null }).artworkDescription;
-            const media = (slide as { artworkMedia?: string | null }).artworkMedia;
-            if (!desc && !media) return null;
-            return (
-              <div className="yarl__slide_footer_custom">
-                {media && <p className="text-xs text-white/60 uppercase tracking-widest mb-1">{media}</p>}
-                {desc && (
-                  <p
-                    className="text-sm text-white/80 text-center"
-                    dangerouslySetInnerHTML={{ __html: desc }}
-                  />
-                )}
-              </div>
-            );
-          },
+          slide: ({ slide, rect }) => (
+            <ArtworkSlide slide={slide as ExtendedSlide} rect={rect} />
+          ),
         }}
       />
     </div>
