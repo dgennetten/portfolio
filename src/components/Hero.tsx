@@ -8,7 +8,7 @@ const Hero: React.FC = () => {
   const heroImage = settings?.hero_image ?? FALLBACK_IMAGE;
 
   return (
-    <div className="relative h-screen flex items-end overflow-hidden">
+    <div className="relative h-[100svh] md:h-screen flex items-end overflow-hidden">
       {/* Full-bleed background image */}
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
@@ -16,9 +16,9 @@ const Hero: React.FC = () => {
       />
 
       {/* Bottom-left editorial text block */}
-      <div className="relative z-10 px-8 pb-12 md:px-16 md:pb-16 max-w-xl">
-        <p className="text-xs tracking-[0.3em] uppercase text-white/50 mb-3">Student · Engineer · Artist</p>
-        <h1 className="text-4xl md:text-6xl font-light tracking-wide text-white leading-tight">
+      <div className="relative z-10 px-6 pb-24 md:px-16 md:pb-16 max-w-xl">
+        <p className="text-xs tracking-[0.3em] uppercase text-white/50 mb-2 md:mb-3">Student · Engineer · Artist</p>
+        <h1 className="text-3xl md:text-6xl font-light tracking-wide text-white leading-tight">
           Douglas<br />Gennetten
         </h1>
         <div className="mt-6 w-12 h-px bg-accent" />
