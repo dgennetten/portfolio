@@ -38,10 +38,10 @@ const MobileNavigation: React.FC = () => {
                   className="flex flex-col items-center py-2.5 relative"
                 >
                   <Icon
-                    size={18}
-                    className={`transition-colors duration-150 ${isActive ? 'text-accent' : 'text-stone-400'}`}
+                    size={21}
+                    className={`transition-colors duration-150 ${isActive ? 'text-accent' : 'text-stone-500'}`}
                   />
-                  <span className={`text-[10px] mt-1 tracking-wide transition-colors duration-150 ${isActive ? 'text-accent font-medium' : 'text-stone-400'}`}>
+                  <span className={`text-[11px] mt-1 tracking-wide transition-colors duration-150 ${isActive ? 'text-accent font-medium' : 'text-stone-500'}`}>
                     {label}
                   </span>
                   {isActive && (
