@@ -39,25 +39,23 @@ const ArtistBio: React.FC = () => {
 
         {/* Text */}
         <div className="md:w-7/12 lg:w-2/3">
-          <p className="text-base text-stone-700 leading-[1.85] mb-6">
-            After a long career in engineering, retirement has given me the freedom to pursue my
-            love for art, self-discovery, and learning.
-            I've come to appreciate that art is not just a personal journey but a shared
-            experience that connects us in unexpected ways.
+          <p className="text-base font-semibold text-ink leading-[1.85] mb-6">
+            Artist. Engineer. Lifelong Student.
           </p>
 
           <p className="text-base text-stone-700 leading-[1.85] mb-6">
-            Starting with figurative abstraction in Colorado marble, I now focus on classical
-            realism, honing my skills through academy-style atelier training. My lifelong
-            fascination with science and mathematics—especially geometry—fuels my appreciation
-            for Islamic art, where intricate patterns and symmetry offer endless inspiration.
+            Driven by a relentless curiosity, I spend my time at the intersection of technical
+            precision and creative expression. With a background in engineering and a current focus
+            on fine art and classical realism, I view the world as a canvas of complex patterns,
+            geometry, and structure.
           </p>
 
           <p className="text-base text-stone-700 leading-[1.85]">
-            Years ago, I created a website called Foolscap as a place to share my thoughts.
-            Few people visited, but it became an outlet for reflection. The name has stayed
-            with me, and this page feels like a natural extension of that early project—a space
-            to explore art, science, and mathematics with an open mind.
+            For me, the learning never stops. Whether carving stone, writing code, or exploring the
+            elegant mathematics of design, I am constantly studying the mechanics of our world. I
+            remain deeply bullish on the future of life on Earth—convinced that human curiosity,
+            art, and innovation will continue to drive us toward remarkable horizons. This space is
+            an extension of that ongoing exploration.
           </p>
         </div>
       </div>
