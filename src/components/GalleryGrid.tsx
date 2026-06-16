@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Expand } from 'lucide-react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
@@ -259,6 +260,12 @@ const GalleryGrid: React.FC = () => {
                     />
                   )}
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-300 rounded-lg" />
+                  <Expand
+                    size={14}
+                    strokeWidth={2}
+                    className="absolute bottom-2 right-2 text-white drop-shadow md:hidden pointer-events-none"
+                    aria-hidden
+                  />
                 </div>
                 <h3 className="text-base font-medium text-stone-800 mb-0.5">{artwork.title}</h3>
                 {artwork.media && (

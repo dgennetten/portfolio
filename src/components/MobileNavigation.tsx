@@ -45,7 +45,7 @@ const MobileNavigation: React.FC = () => {
                     {label}
                   </span>
                   {isActive && (
-                    <span className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-accent rounded-full" />
+                    <span className="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-1 bg-accent rounded-full" />
                   )}
                 </NavLink>
               </li>
