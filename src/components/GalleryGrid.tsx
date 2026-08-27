@@ -369,6 +369,9 @@ const GalleryGrid: React.FC = () => {
         plugins={[Fullscreen]}
         on={{
           view: ({ index }) => {
+            // Keep the controlled `index` prop in sync with the current slide,
+            // otherwise the next re-render snaps the lightbox back to the start.
+            setLightboxIndex(index);
             setCurrentIndex(index);
             if (artworks[index]) setArtParam(artworks[index].id);
           },
