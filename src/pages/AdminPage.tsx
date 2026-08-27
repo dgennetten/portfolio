@@ -323,7 +323,7 @@ export default function AdminPage() {
               <Field label="Image">
                 <div className="flex gap-2">
                   <input value={form.image_src} onChange={e => setForm(f => ({ ...f, image_src: e.target.value }))}
-                    placeholder="/images/Category/filename.jpg"
+                    placeholder="/images/Category/filename.jpg  or  https://example.com/photo.jpg"
                     className={fieldCls + ' flex-1'} />
                   <button type="button" onClick={() => fileRef.current?.click()}
                     disabled={uploading}
@@ -334,8 +334,13 @@ export default function AdminPage() {
                   <input ref={fileRef} type="file" accept="image/*,video/mp4"
                     onChange={handleFileUpload} className="hidden" />
                 </div>
+                <p className="mt-1.5 text-xs text-stone-400">
+                  Paste a site path (<span className="font-mono">/images/…</span>) or an external image URL (<span className="font-mono">https://…</span>), or upload a file.
+                </p>
                 {form.image_src && (
-                  <img src={form.image_src} alt="preview" className="mt-2 h-24 w-24 object-cover rounded border border-stone-200" />
+                  isValidImageSrc(form.image_src)
+                    ? <img src={form.image_src} alt="preview" className="mt-2 h-24 w-24 object-cover rounded border border-stone-200" />
+                    : <p className="mt-2 text-xs text-amber-600">Enter a path starting with “/” or a full http(s):// URL.</p>
                 )}
               </Field>
 
@@ -412,6 +417,13 @@ export default function AdminPage() {
 }
 
 const fieldCls = 'w-full px-3 py-2 border border-stone-300 text-sm rounded focus:outline-none focus:ring-1 focus:ring-stone-400';
+
+// Accept either a site-relative path (/images/…) or an absolute http(s) URL.
+function isValidImageSrc(src: string): boolean {
+  const s = src.trim();
+  if (s.startsWith('/')) return true;
+  return /^https?:\/\/.+/i.test(s);
+}
 
 function Field({ label, required, children }: { label: string; required?: boolean; children: React.ReactNode }) {
   return (
