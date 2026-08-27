@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Expand } from 'lucide-react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { Expand, Share2, Check } from 'lucide-react';
+import { useParams, useNavigate, useSearchParams } from 'react-router-dom';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import Fullscreen from 'yet-another-react-lightbox/plugins/fullscreen';
@@ -196,12 +196,98 @@ const ArtworkSlide: React.FC<{ slide: ExtendedSlide; rect: { width: number; heig
   );
 };
 
+const ShareControl: React.FC<{ url: string; title: string }> = ({ url, title }) => {
+  const [copied, setCopied] = useState(false);
+
+  const handleShare = async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({ title, url });
+      } catch {
+        /* user dismissed the share sheet */
+      }
+      return;
+    }
+    try {
+      await navigator.clipboard.writeText(url);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      /* clipboard unavailable */
+    }
+  };
+
+  return (
+    <div style={{ position: 'absolute', top: 0, left: 0, zIndex: 10, padding: '8px', display: 'flex', alignItems: 'center', gap: '8px' }}>
+      <button
+        type="button"
+        onClick={handleShare}
+        aria-label="Copy a link to this artwork"
+        title="Share link to this artwork"
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          width: '40px',
+          height: '40px',
+          background: 'transparent',
+          border: 'none',
+          color: '#fff',
+          cursor: 'pointer',
+          opacity: 0.85,
+          filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.6))',
+        }}
+      >
+        {copied ? <Check size={22} strokeWidth={2} /> : <Share2 size={20} strokeWidth={2} />}
+      </button>
+      {copied && (
+        <span style={{ color: '#fff', fontSize: '0.8rem', filter: 'drop-shadow(0 1px 2px rgba(0,0,0,0.6))' }}>
+          Link copied
+        </span>
+      )}
+    </div>
+  );
+};
+
 const GalleryGrid: React.FC = () => {
   const { category } = useParams<{ category: Category }>();
   const navigate = useNavigate();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [lightboxIndex, setLightboxIndex] = useState(-1);
+  const [currentIndex, setCurrentIndex] = useState(-1);
 
   const { data: artworks = [], isLoading, isError } = useArtworks(category ?? '');
+
+  const setArtParam = (id: number | null) => {
+    const next = new URLSearchParams(searchParams);
+    if (id === null) next.delete('art');
+    else next.set('art', String(id));
+    setSearchParams(next, { replace: true });
+  };
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setCurrentIndex(index);
+    if (artworks[index]) setArtParam(artworks[index].id);
+  };
+
+  const closeLightbox = () => {
+    setLightboxIndex(-1);
+    setCurrentIndex(-1);
+    setArtParam(null);
+  };
+
+  // Open the lightbox from a shared deep link (?art=<id>) once artworks load.
+  useEffect(() => {
+    if (lightboxIndex >= 0) return;
+    const artId = searchParams.get('art');
+    if (!artId) return;
+    const idx = artworks.findIndex((a) => String(a.id) === artId);
+    if (idx >= 0) {
+      setLightboxIndex(idx);
+      setCurrentIndex(idx);
+    }
+  }, [artworks, searchParams, lightboxIndex]);
 
   const slides = artworks.map((a) => {
     const base = { title: a.title, artworkMedia: a.media, artworkDescription: a.description };
@@ -241,7 +327,7 @@ const GalleryGrid: React.FC = () => {
               <div
                 key={artwork.id}
                 className="group cursor-pointer"
-                onClick={() => setLightboxIndex(index)}
+                onClick={() => openLightbox(index)}
               >
                 <div className="relative aspect-square overflow-hidden mb-3 rounded-lg bg-stone-100">
                   {isVideo(artwork.image_src) ? (
@@ -277,14 +363,26 @@ const GalleryGrid: React.FC = () => {
 
       <Lightbox
         open={lightboxIndex >= 0}
-        close={() => setLightboxIndex(-1)}
+        close={closeLightbox}
         index={lightboxIndex}
         slides={slides}
         plugins={[Fullscreen]}
+        on={{
+          view: ({ index }) => {
+            setCurrentIndex(index);
+            if (artworks[index]) setArtParam(artworks[index].id);
+          },
+        }}
         render={{
           slide: ({ slide, rect }) => (
             <ArtworkSlide slide={slide as ExtendedSlide} rect={rect} />
           ),
+          controls: () => {
+            const art = artworks[currentIndex];
+            if (!art) return null;
+            const url = `${window.location.origin}/gallery/${category}?art=${art.id}`;
+            return <ShareControl url={url} title={`${art.title} — K. Douglas Gennetten`} />;
+          },
         }}
       />
     </div>
